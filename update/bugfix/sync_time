@@ -1,7 +1,0 @@
-#!/bin/bash
-if ping -c 1 google.com &> /dev/null
-then
-  sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
-else
-  echo "No connection to the internet"
-fi
