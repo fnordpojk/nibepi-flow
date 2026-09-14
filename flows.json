@@ -84,6 +84,14 @@
         "info": ""
     },
     {
+        "id": "63d468d5922893fb",
+        "type": "tab",
+        "label": "VV-AI",
+        "disabled": false,
+        "info": "Varmvatten-AI fran pizzihelmet/nibepi-flow (vv-ai-flow). Importerad 2026-09-14.",
+        "env": []
+    },
+    {
         "id": "64327e50.8f365",
         "type": "subflow",
         "name": "Skrivläge",
@@ -237,6 +245,63 @@
         "color": "#DDAA99"
     },
     {
+        "id": "e4acb32331abeaf0",
+        "type": "subflow",
+        "name": "Update core config (7)",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 70,
+                "y": 77,
+                "wires": [
+                    {
+                        "id": "27b20095ea4e626c"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 965,
+                "y": 161,
+                "wires": [
+                    {
+                        "id": "c97a6f047ddcc82b",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 965,
+                "y": 217,
+                "wires": [
+                    {
+                        "id": "c97a6f047ddcc82b",
+                        "port": 1
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "Name",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "Function",
+                "type": "str",
+                "value": ""
+            }
+        ],
+        "color": "#DDAA99",
+        "outputLabels": [
+            "Node Config",
+            "Config"
+        ]
+    },
+    {
         "id": "d7f6b34d.d13d6",
         "type": "mqtt-broker",
         "name": "NibePi",
@@ -314,16 +379,6 @@
         "type": "ui_group",
         "name": "Uppdateringar",
         "tab": "6aa61182.b42ed",
-        "order": 1,
-        "disp": false,
-        "width": "12",
-        "collapse": false
-    },
-    {
-        "id": "4f8b35d1.5c8fec",
-        "type": "ui_group",
-        "name": "Registerhantering",
-        "tab": "1dc0b5a5.8e56aa",
         "order": 1,
         "disp": false,
         "width": "12",
@@ -559,16 +614,6 @@
         "collapse": false
     },
     {
-        "id": "1409f0ed.f2d6cf",
-        "type": "ui_group",
-        "name": "Automatisk lufthastighet",
-        "tab": "88b70b91.66f338",
-        "order": 1,
-        "disp": true,
-        "width": "12",
-        "collapse": false
-    },
-    {
         "id": "88b70b91.66f338",
         "type": "ui_tab",
         "name": "Lufthastighet",
@@ -619,16 +664,6 @@
         "tab": "74cc47a5.9ee208",
         "order": 6,
         "disp": false,
-        "width": "12",
-        "collapse": false
-    },
-    {
-        "id": "794cdfce.3f74f",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "ecddb018.0e4f3",
-        "order": 1,
-        "disp": true,
         "width": "12",
         "collapse": false
     },
@@ -918,29 +953,11 @@
         "collapse": false
     },
     {
-        "id": "4aaf21c9.38fb8",
-        "type": "ui_group",
-        "name": "Data Export",
-        "tab": "f3ab33ed.96488",
-        "order": 1,
-        "disp": true,
-        "width": "12"
-    },
-    {
         "id": "f3ab33ed.96488",
         "type": "ui_tab",
         "name": "Dashboard",
         "icon": "dashboard",
         "order": 1
-    },
-    {
-        "id": "db563368.2a2e6",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "9a2cdcec.a1512",
-        "order": 1,
-        "disp": true,
-        "width": "6"
     },
     {
         "id": "9a2cdcec.a1512",
@@ -994,16 +1011,6 @@
         "order": 5,
         "disp": false,
         "width": "12",
-        "collapse": false
-    },
-    {
-        "id": "2b6d659c.ea619a",
-        "type": "ui_group",
-        "name": "Original Group Name",
-        "tab": "ca200017.852e",
-        "order": 3,
-        "disp": true,
-        "width": "6",
         "collapse": false
     },
     {
@@ -1061,6 +1068,188 @@
         "name": "Prioriterad tillsats",
         "tab": "ad3904c7.ceae48",
         "order": 10,
+        "disp": false,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4f8b35d1.5c8fec",
+        "type": "ui_group",
+        "name": "Registerhantering",
+        "tab": "1dc0b5a5.8e56aa",
+        "order": 1,
+        "disp": false,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "1409f0ed.f2d6cf",
+        "type": "ui_group",
+        "name": "Automatisk lufthastighet",
+        "tab": "88b70b91.66f338",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "794cdfce.3f74f",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "ecddb018.0e4f3",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "4aaf21c9.38fb8",
+        "type": "ui_group",
+        "name": "Data Export",
+        "tab": "f3ab33ed.96488",
+        "order": 1,
+        "disp": true,
+        "width": "12"
+    },
+    {
+        "id": "db563368.2a2e6",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "9a2cdcec.a1512",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "2b6d659c.ea619a",
+        "type": "ui_group",
+        "name": "Original Group Name",
+        "tab": "ca200017.852e",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "d342f8a5987ee638",
+        "type": "ui_tab",
+        "name": "Varmvatten Lärande AI",
+        "icon": "fa-tint",
+        "order": 12,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5695785330febbb8",
+        "type": "ui_group",
+        "name": "VV Ai Extra",
+        "tab": "d342f8a5987ee638",
+        "order": 4,
+        "disp": true,
+        "width": "12",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "cf2847ec068da4d4",
+        "type": "ui_group",
+        "name": "VV-Ai elprisjusteringar",
+        "tab": "d342f8a5987ee638",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "a2ad832cfe72c37c",
+        "type": "ui_group",
+        "name": "Tidsstyrning För VV.",
+        "tab": "d342f8a5987ee638",
+        "order": 5,
+        "disp": true,
+        "width": "12",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "b5e11713367ebe3c",
+        "type": "ui_group",
+        "name": "VV Lärande",
+        "tab": "d342f8a5987ee638",
+        "order": 1,
+        "disp": false,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "e4bcb853fe9dd22b",
+        "type": "ui_spacer",
+        "z": "63d468d5922893fb",
+        "name": "spacer",
+        "group": "5695785330febbb8",
+        "order": 7,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "ced0fa78984ec6d6",
+        "type": "ui_spacer",
+        "z": "63d468d5922893fb",
+        "name": "spacer",
+        "group": "5695785330febbb8",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "c3dbe7c3d44090eb",
+        "type": "ui_spacer",
+        "z": "63d468d5922893fb",
+        "name": "spacer",
+        "group": "5695785330febbb8",
+        "order": 11,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "1144e232f445520e",
+        "type": "ui_spacer",
+        "z": "63d468d5922893fb",
+        "name": "spacer",
+        "group": "5695785330febbb8",
+        "order": 12,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "4c7bdf57686373cf",
+        "type": "ui_spacer",
+        "z": "63d468d5922893fb",
+        "name": "spacer",
+        "group": "5695785330febbb8",
+        "order": 13,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "c4e7b2a9d1f3e002",
+        "type": "ui_group",
+        "name": "Inställningar VV-AI",
+        "tab": "d342f8a5987ee638",
+        "order": 2,
+        "disp": false,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d3cce759",
+        "type": "ui_group",
+        "name": "Prisinställningar",
+        "tab": "b75c3bdd.9e0ae8",
+        "order": 8,
         "disp": false,
         "width": "12",
         "collapse": false,
@@ -1301,6 +1490,128 @@
         "wires": [
             [
                 "93cda2e0.58153"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ccdc575c713e1f6b",
+        "type": "function",
+        "z": "e4acb32331abeaf0",
+        "name": "",
+        "func": "// Fungerar både när nibe-request lagt config i msg.config eller msg.payload\nlet config = msg.config || msg.payload;\nif (!config) return null;\n\nconst pluginName = env.get(\"Name\") || \"price\";\nconfig[pluginName] = config[pluginName] || {};\n\nlet t = (msg.topic || \"\").toString();\nlet v = msg.payload;\n\n// Typa fälten korrekt\nif (t === \"enable_own_setting\" || t === \"enable_own_price\" || t === \"apply_vat\") {\n    v = (v === true || v === \"true\" || v === 1 || v === \"1\");\n} else if ([\"verycheap\", \"veryexpensive\", \"addition_ore\"].includes(t)) {\n    v = Number(v);\n    if (!isFinite(v)) return null; // ignorera skräp\n}\n\n// Skriv till config och skicka vidare till setConfig\nconfig[pluginName][t] = v;\nnode.send({ payload: config });\nreturn null;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 100,
+        "wires": [
+            [
+                "1de6ce583a570583"
+            ]
+        ]
+    },
+    {
+        "id": "1de6ce583a570583",
+        "type": "nibe-output",
+        "z": "e4acb32331abeaf0",
+        "server": "844659a2.8d8508",
+        "name": "setConfig",
+        "x": 725,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "27b20095ea4e626c",
+        "type": "nibe-request",
+        "z": "e4acb32331abeaf0",
+        "server": "844659a2.8d8508",
+        "name": "Config",
+        "x": 197,
+        "y": 77,
+        "wires": [
+            [
+                "ccdc575c713e1f6b"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c97a6f047ddcc82b",
+        "type": "function",
+        "z": "e4acb32331abeaf0",
+        "name": "",
+        "func": "    let topic = env.get(\"Function\");\n    //let language = \"SE\";\n    //if(msg.payload.system!==undefined && msg.payload.system.language!==undefined) {\n    //    language = msg.payload.system.language;\n    //}\n    let pluginName = env.get(\"Name\");\n    //let translate = global.get('translate');\n    //let info = topic;\n    //if(translate!==undefined && translate.dash!==undefined && translate.dash[topic]!==undefined && translate.dash[topic][language]!==undefined) {\n    //    info = translate.dash[topic][language]\n    //}\n\n    if(topic!==undefined) {\n        if(msg.payload[pluginName]===undefined) {\n            msg.payload[pluginName] = {};\n        }\n        if(msg.payload[pluginName][topic]!==undefined) {\n            node.send({payload:msg.payload[pluginName][topic],topic:\"Start\"});\n            //if(info!==topic) {\n            //node.send({label:info});    \n            //}\n            node.send([null,{topic:\"config\",payload:msg.payload}]);\n        }\n        //if(pluginName==\"info\") {\n        //    node.send({label:info});\n        //}\n    }",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 330,
+        "y": 161,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d5d62d1af4eda0e4",
+        "type": "nibe-request",
+        "z": "e4acb32331abeaf0",
+        "server": "844659a2.8d8508",
+        "name": "Config",
+        "x": 169,
+        "y": 175,
+        "wires": [
+            [],
+            [
+                "c97a6f047ddcc82b"
+            ]
+        ]
+    },
+    {
+        "id": "0847644f142ce679",
+        "type": "inject",
+        "z": "e4acb32331abeaf0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 133,
+        "y": 231,
+        "wires": [
+            [
+                "d5d62d1af4eda0e4"
+            ]
+        ]
+    },
+    {
+        "id": "c8f50836bdee82a6",
+        "type": "nibe-input",
+        "z": "e4acb32331abeaf0",
+        "server": "844659a2.8d8508",
+        "name": "Config",
+        "x": 92,
+        "y": 126,
+        "wires": [
+            [
+                "c97a6f047ddcc82b"
             ],
             []
         ]
@@ -19588,6 +19899,339 @@
         "wires": []
     },
     {
+        "id": "dfceef6d23cc2a78",
+        "type": "ui_text",
+        "z": "960078e.e3e6d88",
+        "group": "d3cce759",
+        "order": 2,
+        "width": "12",
+        "height": "4",
+        "name": "Moms/VAT info",
+        "label": "{{msg.label}}",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1020,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "bcbcea520c075f62",
+        "type": "ui_template",
+        "z": "960078e.e3e6d88",
+        "group": "d3cce759",
+        "name": "HEAD: Pris – label vänster, input höger",
+        "order": 1,
+        "width": "",
+        "height": "",
+        "format": "<style>\n    /* === Prispåslag inline (label helt till vänster, input högerjusterad) === */\n    /* Class på din ui_text_input: nibe-price-inline */\n\n    /* Finjustera vänsterkant här (testa -14px, -16px, -18px …) */\n    :root {\n        --nibe-left-align: -13px;\n    }\n\n    /* Ytterkant orörd (så ramen inte klipps) */\n    .nr-dashboard-textinput.nibe-price-inline {\n        margin-left: 0 !important;\n        padding-left: 0 !important;\n    }\n\n    /* Flytta det INRE md-input-container lite åt vänster */\n    .nr-dashboard-textinput.nibe-price-inline md-input-container,\n    .nr-dashboard-textinput.nibe-price-inline md-input-container.md-block {\n        display: flex !important;\n        align-items: center;\n        gap: 12px;\n        margin: 0 0 0 var(--nibe-left-align) !important;\n        /* << justera här */\n        padding: 0 !important;\n        width: auto !important;\n        max-width: 100% !important;\n        box-sizing: border-box;\n    }\n\n    /* LABEL – statisk, fet/större och utan extra vänsterpadding */\n    .nr-dashboard-textinput.nibe-price-inline md-input-container>label {\n        position: static !important;\n        transform: none !important;\n        margin: 0 12px 0 0 !important;\n        padding-left: 0 !important;\n        min-width: 220px;\n        \n    }\n\n    /* INPUT – synligt, fast bredd och högerjusterat värde */\n    .nr-dashboard-textinput.nibe-price-inline md-input-container input {\n        flex: 0 0 140px;\n        width: 140px !important;\n        min-width: 120px;\n        max-width: 240px;\n        text-align: right;\n    }\n\n    /* Fet & större label för switchen \"Moms (25%)\"\n    Sätt Class = nibe-bold på just den ui_switch-noden\n    (täcker både wrappern och md-switch direkt) */\n    .nr-dashboard-switch.nibe-bold .md-label,\n    .nr-dashboard-switch.nibe-bold .md-label > *,\n    .nr-dashboard-switch.nibe-bold .md-switch-label,\n    md-switch.nibe-bold .md-label,\n    md-switch.nibe-bold .md-label > *,\n    md-switch.nibe-bold .md-switch-label{\n    font-weight: 700 !important;\n    font-size: 16px !important; /* höj t.ex. till 17–18px om du vill */\n    }\n\n    /* (valfritt) behåll underlinjen; kommentera bort nästa block om du vill dölja den */\n    /*\n.nr-dashboard-textinput.nibe-price-inline md-input-container .md-input-underline,\n.nr-dashboard-textinput.nibe-price-inline md-input-container .md-errors-spacer{\n  display:none !important;\n}\n*/\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "className": "",
+        "x": 970,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "648e0297bcaec5ab",
+        "type": "comment",
+        "z": "960078e.e3e6d88",
+        "name": "Sätt Class = nibe-price-inline på din prispåslags-input",
+        "x": 1010,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "d93afb4256b2e131",
+        "type": "ui_switch",
+        "z": "960078e.e3e6d88",
+        "name": "moms switch",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "d3cce759",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "apply_vat",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "nibe-bold",
+        "x": 1270,
+        "y": 1460,
+        "wires": [
+            [
+                "692e117b1f075db2"
+            ]
+        ]
+    },
+    {
+        "id": "7a7c7cc31cc74e5f",
+        "type": "ui_text_input",
+        "z": "960078e.e3e6d88",
+        "name": "",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "d3cce759",
+        "order": 5,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "mode": "number",
+        "delay": "0",
+        "topic": "addition_ore",
+        "sendOnBlur": true,
+        "className": "nibe-price-inline",
+        "topicType": "str",
+        "x": 1270,
+        "y": 1380,
+        "wires": [
+            [
+                "948087d8b128c59a"
+            ]
+        ]
+    },
+    {
+        "id": "e742b9829b90b878",
+        "type": "ui_switch",
+        "z": "960078e.e3e6d88",
+        "name": "enable_own_price",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "d3cce759",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "enable_own_price",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 1270,
+        "y": 1220,
+        "wires": [
+            [
+                "b0445223ffeb3274"
+            ]
+        ]
+    },
+    {
+        "id": "513c76b06221bd72",
+        "type": "function",
+        "z": "960078e.e3e6d88",
+        "name": "Toggle Own Price UI",
+        "func": "let source = msg.payload;\nif (source === true) {\n    msg = {\n        enabled: true\n    };\n    return msg;\n} else {\n    msg = {\n        enabled: false\n    };\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 1300,
+        "wires": [
+            [
+                "e7af414cc76a34ec",
+                "09f71c621bf75474"
+            ]
+        ]
+    },
+    {
+        "id": "b0445223ffeb3274",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "960078e.e3e6d88",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "price",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "enable_own_price",
+                "type": "str"
+            }
+        ],
+        "x": 770,
+        "y": 1220,
+        "wires": [
+            [
+                "f7fef3aec64ca52e",
+                "513c76b06221bd72"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "948087d8b128c59a",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "960078e.e3e6d88",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "price",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "addition_ore",
+                "type": "str"
+            }
+        ],
+        "x": 770,
+        "y": 1380,
+        "wires": [
+            [
+                "e7af414cc76a34ec"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "692e117b1f075db2",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "960078e.e3e6d88",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "price",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "apply_vat",
+                "type": "str"
+            }
+        ],
+        "x": 770,
+        "y": 1460,
+        "wires": [
+            [
+                "09f71c621bf75474"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f7fef3aec64ca52e",
+        "type": "subflow:f947788.96a2488",
+        "z": "960078e.e3e6d88",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "priceadd_switch_label",
+                "type": "str"
+            }
+        ],
+        "x": 1020,
+        "y": 1220,
+        "wires": [
+            [
+                "e742b9829b90b878"
+            ]
+        ]
+    },
+    {
+        "id": "09f71c621bf75474",
+        "type": "subflow:f947788.96a2488",
+        "z": "960078e.e3e6d88",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "moms_switch",
+                "type": "str"
+            }
+        ],
+        "x": 1040,
+        "y": 1460,
+        "wires": [
+            [
+                "d93afb4256b2e131"
+            ]
+        ]
+    },
+    {
+        "id": "e7af414cc76a34ec",
+        "type": "subflow:f947788.96a2488",
+        "z": "960078e.e3e6d88",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "surcharge_addition_label",
+                "type": "str"
+            }
+        ],
+        "x": 1000,
+        "y": 1380,
+        "wires": [
+            [
+                "7a7c7cc31cc74e5f"
+            ]
+        ]
+    },
+    {
+        "id": "2beadfeeba16b558",
+        "type": "subflow:f947788.96a2488",
+        "z": "960078e.e3e6d88",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "price_addition_info",
+                "type": "str"
+            }
+        ],
+        "x": 750,
+        "y": 1140,
+        "wires": [
+            [
+                "dfceef6d23cc2a78"
+            ]
+        ]
+    },
+    {
+        "id": "2a23b367943d737d",
+        "type": "link out",
+        "z": "960078e.e3e6d88",
+        "name": "VV AI Elprisreglering",
+        "mode": "link",
+        "links": [
+            "947060904d403679"
+        ],
+        "x": 625,
+        "y": 20,
+        "wires": []
+    },
+    {
         "id": "536a060f.983278",
         "type": "nibe-hotwater",
         "z": "fa4686d6.c21688",
@@ -23372,6 +24016,2620 @@
         "wires": [
             [
                 "f5f441e5.fad08"
+            ]
+        ]
+    },
+    {
+        "id": "a24e4db818926a86",
+        "type": "ui_switch",
+        "z": "63d468d5922893fb",
+        "name": "Aktivera VV-lärande",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "b5e11713367ebe3c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "enable_vv_learning",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 500,
+        "y": 200,
+        "wires": [
+            [
+                "f8e2e96066b09766"
+            ]
+        ]
+    },
+    {
+        "id": "f8e2e96066b09766",
+        "type": "subflow:e4acb32331abeaf0",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "enable_vv_learning",
+                "type": "str"
+            }
+        ],
+        "x": 820,
+        "y": 160,
+        "wires": [
+            [
+                "bee401ee77574960"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "43c63155c22dc11c",
+        "type": "nibe-hotwater-ai",
+        "z": "63d468d5922893fb",
+        "server": "844659a2.8d8508",
+        "name": "",
+        "topic": "nibe_vv_ai",
+        "x": 510,
+        "y": 580,
+        "wires": [
+            [
+                "d6aad21fe643a0cd",
+                "1141bb4145578722"
+            ]
+        ]
+    },
+    {
+        "id": "bee401ee77574960",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_learning_enable_switch",
+                "type": "str"
+            }
+        ],
+        "x": 200,
+        "y": 160,
+        "wires": [
+            [
+                "a24e4db818926a86"
+            ]
+        ]
+    },
+    {
+        "id": "d6aad21fe643a0cd",
+        "type": "debug",
+        "z": "63d468d5922893fb",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1850,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "983fb7aa3845df62",
+        "type": "ui_text",
+        "z": "63d468d5922893fb",
+        "group": "b5e11713367ebe3c",
+        "order": 1,
+        "width": 12,
+        "height": 3,
+        "name": "VV ai info 1",
+        "label": "{{msg.label}}",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1150,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "57a5d289f513336e",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_info1",
+                "type": "str"
+            }
+        ],
+        "x": 890,
+        "y": 60,
+        "wires": [
+            [
+                "983fb7aa3845df62"
+            ]
+        ]
+    },
+    {
+        "id": "cada0de0557a8df4",
+        "type": "ui_text",
+        "z": "63d468d5922893fb",
+        "group": "b5e11713367ebe3c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "VV ai info 2",
+        "label": "{{msg.label}}",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1050,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "61e292f15213db42",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_info2",
+                "type": "str"
+            }
+        ],
+        "x": 790,
+        "y": 780,
+        "wires": [
+            [
+                "cada0de0557a8df4"
+            ]
+        ]
+    },
+    {
+        "id": "8ee7c979bc1f0398",
+        "type": "ui_switch",
+        "z": "63d468d5922893fb",
+        "name": "Aktivera VV AI-styrning",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "b5e11713367ebe3c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "enable_vv_ai_control",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 720,
+        "y": 840,
+        "wires": [
+            [
+                "d257b57aefc187ee"
+            ]
+        ]
+    },
+    {
+        "id": "abe2b2c488528209",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_control_enable_switch",
+                "type": "str"
+            }
+        ],
+        "x": 480,
+        "y": 840,
+        "wires": [
+            [
+                "8ee7c979bc1f0398"
+            ]
+        ]
+    },
+    {
+        "id": "3f5a63ba7c285914",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_control_min_temp_slider",
+                "type": "str"
+            }
+        ],
+        "x": 900,
+        "y": 1260,
+        "wires": [
+            [
+                "cc2a1d97413ea32d"
+            ]
+        ]
+    },
+    {
+        "id": "cc2a1d97413ea32d",
+        "type": "ui_slider",
+        "z": "63d468d5922893fb",
+        "name": "Min temp",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "c4e7b2a9d1f3e002",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "vv_ai_min_temp",
+        "topicType": "str",
+        "min": "1",
+        "max": "50",
+        "step": "0.5",
+        "className": "",
+        "x": 1160,
+        "y": 1260,
+        "wires": [
+            [
+                "24f4f3c1607e03be"
+            ]
+        ]
+    },
+    {
+        "id": "24f4f3c1607e03be",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_ai_min_temp",
+                "type": "str"
+            }
+        ],
+        "x": 640,
+        "y": 1260,
+        "wires": [
+            [
+                "3f5a63ba7c285914"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d257b57aefc187ee",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "enable_vv_ai_control",
+                "type": "str"
+            }
+        ],
+        "x": 220,
+        "y": 840,
+        "wires": [
+            [
+                "abe2b2c488528209"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "1062de3fccd99ece",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_control_preheat_time",
+                "type": "str"
+            }
+        ],
+        "x": 900,
+        "y": 1340,
+        "wires": [
+            [
+                "aec881af785bef9b"
+            ]
+        ]
+    },
+    {
+        "id": "aec881af785bef9b",
+        "type": "ui_slider",
+        "z": "63d468d5922893fb",
+        "name": "Förvärmning Tid",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "c4e7b2a9d1f3e002",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "vv_ai_preheat_hours",
+        "topicType": "str",
+        "min": "1",
+        "max": "23",
+        "step": "1",
+        "className": "",
+        "x": 1160,
+        "y": 1340,
+        "wires": [
+            [
+                "52efa7d38c588691"
+            ]
+        ]
+    },
+    {
+        "id": "52efa7d38c588691",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_ai_preheat_hours",
+                "type": "str"
+            }
+        ],
+        "x": 640,
+        "y": 1340,
+        "wires": [
+            [
+                "1062de3fccd99ece"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "1c5b64aa389963c2",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_learning_rate_slider",
+                "type": "str"
+            }
+        ],
+        "x": 760,
+        "y": 1680,
+        "wires": [
+            [
+                "4da92eb27a17959c"
+            ]
+        ]
+    },
+    {
+        "id": "4da92eb27a17959c",
+        "type": "ui_slider",
+        "z": "63d468d5922893fb",
+        "name": "Lärhastighet",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "5695785330febbb8",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "vv_ai_learning_rate",
+        "topicType": "str",
+        "min": "1",
+        "max": "10",
+        "step": "1",
+        "className": "",
+        "x": 1050,
+        "y": 1680,
+        "wires": [
+            [
+                "5630872e68e915f6"
+            ]
+        ]
+    },
+    {
+        "id": "5630872e68e915f6",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_ai_learning_rate",
+                "type": "str"
+            }
+        ],
+        "x": 520,
+        "y": 1680,
+        "wires": [
+            [
+                "1c5b64aa389963c2"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e6285d09e1d11221",
+        "type": "ui_switch",
+        "z": "63d468d5922893fb",
+        "name": "Aktivera VV Min - Temperatur",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "c4e7b2a9d1f3e002",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "vv_ai_min_temp_enable",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 1100,
+        "y": 1000,
+        "wires": [
+            [
+                "626fe4ce8a522c01"
+            ]
+        ]
+    },
+    {
+        "id": "df3302032087a9e2",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_min_temp_enable_switch",
+                "type": "str"
+            }
+        ],
+        "x": 840,
+        "y": 1000,
+        "wires": [
+            [
+                "e6285d09e1d11221"
+            ]
+        ]
+    },
+    {
+        "id": "626fe4ce8a522c01",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_ai_min_temp_enable",
+                "type": "str"
+            }
+        ],
+        "x": 580,
+        "y": 1000,
+        "wires": [
+            [
+                "df3302032087a9e2",
+                "e7852130ccadb62e"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "4e0bc3ed663d071c",
+        "type": "ui_switch",
+        "z": "63d468d5922893fb",
+        "name": "Ändra AI Lärhastighet",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "5695785330febbb8",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "vv_ai_learning_rate_enable",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 1020,
+        "y": 1620,
+        "wires": [
+            [
+                "13a5c643888392d3"
+            ]
+        ]
+    },
+    {
+        "id": "6867257c5a98daeb",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_learning_rate_switch",
+                "type": "str"
+            }
+        ],
+        "x": 780,
+        "y": 1620,
+        "wires": [
+            [
+                "4e0bc3ed663d071c"
+            ]
+        ]
+    },
+    {
+        "id": "13a5c643888392d3",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_ai_learning_rate_enable",
+                "type": "str"
+            }
+        ],
+        "x": 520,
+        "y": 1620,
+        "wires": [
+            [
+                "6867257c5a98daeb",
+                "d56d43fd6f4ef87e"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5eca833d93c5d6dd",
+        "type": "ui_switch",
+        "z": "63d468d5922893fb",
+        "name": "Aktivera Förvärming tid",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "c4e7b2a9d1f3e002",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "vv_ai_preheat_enable",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 1090,
+        "y": 1080,
+        "wires": [
+            [
+                "af3d90ab62ea9ba1"
+            ]
+        ]
+    },
+    {
+        "id": "9cac3fd2de9f41e4",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_preheat_enable_switch",
+                "type": "str"
+            }
+        ],
+        "x": 840,
+        "y": 1080,
+        "wires": [
+            [
+                "5eca833d93c5d6dd"
+            ]
+        ]
+    },
+    {
+        "id": "af3d90ab62ea9ba1",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_ai_preheat_enable",
+                "type": "str"
+            }
+        ],
+        "x": 580,
+        "y": 1080,
+        "wires": [
+            [
+                "9cac3fd2de9f41e4",
+                "7abbd823658b0523"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a0621b6d337df2a1",
+        "type": "inject",
+        "z": "63d468d5922893fb",
+        "d": true,
+        "name": "Testa lärhastighet",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1580,
+        "y": 680,
+        "wires": [
+            [
+                "afbfe3409493625c"
+            ]
+        ]
+    },
+    {
+        "id": "afbfe3409493625c",
+        "type": "function",
+        "z": "63d468d5922893fb",
+        "d": true,
+        "name": "function 2",
+        "func": "// Läs globala config som Update core config använder\nconst cfgMsg = global.get(\"config\") || {};\nconst rootCfg = cfgMsg.payload || cfgMsg.config || cfgMsg;\nconst hw = (rootCfg && rootCfg.hotwater) ? rootCfg.hotwater : {};\n\n// Grund: 10 (max)\nlet rate = 10;\n\nif (hw.vv_ai_learning_rate_enable === false) {\n    // Switch AV -> backend ska ignorera slider och köra max (10)\n    rate = 10;\n} else {\n    // Switch PÅ -> använd slider om den är vettig\n    if (hw.vv_ai_learning_rate !== undefined) {\n        const r = Number(hw.vv_ai_learning_rate);\n        if (Number.isFinite(r) && r > 0) {\n            rate = r;\n        }\n    }\n}\n\n// Klampa 1–10\nif (rate < 1) rate = 1;\nif (rate > 10) rate = 10;\n\nconst alpha = rate / 100; // samma som i backend\n\nmsg.payload = {\n    vv_ai_learning_rate_enable: hw.vv_ai_learning_rate_enable,\n    vv_ai_learning_rate: hw.vv_ai_learning_rate,\n    effective_rate: rate,\n    effective_alpha: alpha\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 760,
+        "wires": [
+            [
+                "4068f70fc6262a3b"
+            ]
+        ]
+    },
+    {
+        "id": "4068f70fc6262a3b",
+        "type": "debug",
+        "z": "63d468d5922893fb",
+        "d": true,
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1870,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "a5f1842d6e39042a",
+        "type": "ui_text",
+        "z": "63d468d5922893fb",
+        "group": "5695785330febbb8",
+        "order": 16,
+        "width": 0,
+        "height": 0,
+        "name": "VV ai info 3",
+        "label": "{{msg.label}}",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1250,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "cc96808c40007ce7",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_info3",
+                "type": "str"
+            }
+        ],
+        "x": 990,
+        "y": 1140,
+        "wires": [
+            [
+                "a5f1842d6e39042a"
+            ]
+        ]
+    },
+    {
+        "id": "e7852130ccadb62e",
+        "type": "function",
+        "z": "63d468d5922893fb",
+        "name": "Enable/Disable Source",
+        "func": "let source = msg.payload;\nif(source===true) {\n    msg = {\n    enabled:true\n};\nreturn msg;\n} else {\n    msg = {\n    enabled:false\n};\nreturn msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 1160,
+        "wires": [
+            [
+                "3f5a63ba7c285914"
+            ]
+        ]
+    },
+    {
+        "id": "2ea542213a91d4c1",
+        "type": "ui_text",
+        "z": "63d468d5922893fb",
+        "group": "5695785330febbb8",
+        "order": 9,
+        "width": 10,
+        "height": 4,
+        "name": "VV ai info 4",
+        "label": "{{msg.label}}",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1730,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "145e6c1bfc76f218",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_info4",
+                "type": "str"
+            }
+        ],
+        "x": 1470,
+        "y": 1580,
+        "wires": [
+            [
+                "2ea542213a91d4c1"
+            ]
+        ]
+    },
+    {
+        "id": "d56d43fd6f4ef87e",
+        "type": "function",
+        "z": "63d468d5922893fb",
+        "name": "Enable/Disable Source",
+        "func": "let source = msg.payload;\nif(source===true) {\n    msg = {\n    enabled:true\n};\nreturn msg;\n} else {\n    msg = {\n    enabled:false\n};\nreturn msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 1680,
+        "wires": [
+            [
+                "1c5b64aa389963c2"
+            ]
+        ]
+    },
+    {
+        "id": "7abbd823658b0523",
+        "type": "function",
+        "z": "63d468d5922893fb",
+        "name": "Enable/Disable Source",
+        "func": "let source = msg.payload;\nif(source===true) {\n    msg = {\n    enabled:true\n};\nreturn msg;\n} else {\n    msg = {\n    enabled:false\n};\nreturn msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1300,
+        "wires": [
+            [
+                "1062de3fccd99ece"
+            ]
+        ]
+    },
+    {
+        "id": "2cc1c432ae5513a4",
+        "type": "ui_switch",
+        "z": "63d468d5922893fb",
+        "name": "Ändra Tröskel på VV-läge",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "5695785330febbb8",
+        "order": 1,
+        "width": 12,
+        "height": 1,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "vv_ai_mode_thresholds_enable",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 950,
+        "y": 1780,
+        "wires": [
+            [
+                "d734efbe0274f055"
+            ]
+        ]
+    },
+    {
+        "id": "730f4a5323538c98",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_mode_thresholds_enable_switch",
+                "type": "str"
+            }
+        ],
+        "x": 700,
+        "y": 1780,
+        "wires": [
+            [
+                "2cc1c432ae5513a4"
+            ]
+        ]
+    },
+    {
+        "id": "7b7966cbc072f07c",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_mode_threshold_eco_slider",
+                "type": "str"
+            }
+        ],
+        "x": 860,
+        "y": 1940,
+        "wires": [
+            [
+                "0b8989808e38ba30"
+            ]
+        ]
+    },
+    {
+        "id": "440fe0ae50f3d51c",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_ai_day_small_threshold",
+                "type": "str"
+            }
+        ],
+        "x": 600,
+        "y": 1940,
+        "wires": [
+            [
+                "7b7966cbc072f07c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3b7224c77f543d0e",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_mode_threshold_normal_slider",
+                "type": "str"
+            }
+        ],
+        "x": 860,
+        "y": 2020,
+        "wires": [
+            [
+                "1cb4185570bdc5a5"
+            ]
+        ]
+    },
+    {
+        "id": "20cd007b6108befe",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_ai_day_medium_threshold",
+                "type": "str"
+            }
+        ],
+        "x": 600,
+        "y": 2020,
+        "wires": [
+            [
+                "3b7224c77f543d0e"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d734efbe0274f055",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_ai_mode_thresholds_enable",
+                "type": "str"
+            }
+        ],
+        "x": 440,
+        "y": 1780,
+        "wires": [
+            [
+                "730f4a5323538c98",
+                "0d8edc000ea93664"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "b24baaac901f6753",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_mode_threshold_lux_slider",
+                "type": "str"
+            }
+        ],
+        "x": 860,
+        "y": 2100,
+        "wires": [
+            [
+                "7df1beae88d50e38"
+            ]
+        ]
+    },
+    {
+        "id": "72b517367e948df1",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_ai_day_large_threshold",
+                "type": "str"
+            }
+        ],
+        "x": 600,
+        "y": 2100,
+        "wires": [
+            [
+                "b24baaac901f6753"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "1a04cc2bb2daa1f6",
+        "type": "ui_text",
+        "z": "63d468d5922893fb",
+        "group": "5695785330febbb8",
+        "order": 2,
+        "width": 12,
+        "height": 2,
+        "name": "VV ai threshold info",
+        "label": "{{msg.label}}",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1370,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "fe099abb84984b08",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_threshold_info",
+                "type": "str"
+            }
+        ],
+        "x": 1090,
+        "y": 1860,
+        "wires": [
+            [
+                "1a04cc2bb2daa1f6"
+            ]
+        ]
+    },
+    {
+        "id": "0d8edc000ea93664",
+        "type": "function",
+        "z": "63d468d5922893fb",
+        "name": "Enable/Disable Source",
+        "func": "let source = msg.payload;\nif(source===true) {\n    msg = {\n    enabled:true\n};\nreturn msg;\n} else {\n    msg = {\n    enabled:false\n};\nreturn msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 1900,
+        "wires": [
+            [
+                "fe099abb84984b08",
+                "7b7966cbc072f07c",
+                "3b7224c77f543d0e",
+                "b24baaac901f6753"
+            ]
+        ]
+    },
+    {
+        "id": "0b8989808e38ba30",
+        "type": "ui_slider",
+        "z": "63d468d5922893fb",
+        "name": "ingen VV → ECO-gräns",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "5695785330febbb8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "vv_ai_day_small_threshold",
+        "topicType": "str",
+        "min": "0",
+        "max": "15",
+        "step": "0.5",
+        "className": "",
+        "x": 1110,
+        "y": 1940,
+        "wires": [
+            [
+                "440fe0ae50f3d51c"
+            ]
+        ]
+    },
+    {
+        "id": "1cb4185570bdc5a5",
+        "type": "ui_slider",
+        "z": "63d468d5922893fb",
+        "name": "ECO → NORMAL",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "5695785330febbb8",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "vv_ai_day_medium_threshold",
+        "topicType": "str",
+        "min": "0",
+        "max": "25",
+        "step": "0.5",
+        "className": "",
+        "x": 1090,
+        "y": 2020,
+        "wires": [
+            [
+                "20cd007b6108befe"
+            ]
+        ]
+    },
+    {
+        "id": "7df1beae88d50e38",
+        "type": "ui_slider",
+        "z": "63d468d5922893fb",
+        "name": "ECO → LUX",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "5695785330febbb8",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "vv_ai_day_large_threshold",
+        "topicType": "str",
+        "min": "0",
+        "max": "40",
+        "step": "0.5",
+        "className": "",
+        "x": 1070,
+        "y": 2100,
+        "wires": [
+            [
+                "72b517367e948df1"
+            ]
+        ]
+    },
+    {
+        "id": "985b52fd40217260",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_min_drop_slider",
+                "type": "str"
+            }
+        ],
+        "x": 640,
+        "y": 360,
+        "wires": [
+            [
+                "29735c31e3ae5bcc"
+            ]
+        ]
+    },
+    {
+        "id": "29735c31e3ae5bcc",
+        "type": "ui_slider",
+        "z": "63d468d5922893fb",
+        "name": "Ändra BT6",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "5695785330febbb8",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "vv_ai_min_drop",
+        "topicType": "str",
+        "min": "1",
+        "max": "12",
+        "step": "1",
+        "className": "",
+        "x": 930,
+        "y": 360,
+        "wires": [
+            [
+                "2832def257cec349"
+            ]
+        ]
+    },
+    {
+        "id": "2832def257cec349",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_ai_min_drop",
+                "type": "str"
+            }
+        ],
+        "x": 400,
+        "y": 360,
+        "wires": [
+            [
+                "985b52fd40217260"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a33f133a3ba5b5cf",
+        "type": "ui_switch",
+        "z": "63d468d5922893fb",
+        "name": "Ändra drop av BT6 som räknas som vv uttag",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "5695785330febbb8",
+        "order": 15,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "vv_ai_min_drop_bt6_enable",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 1030,
+        "y": 300,
+        "wires": [
+            [
+                "8222f5e4d8b49c9a"
+            ]
+        ]
+    },
+    {
+        "id": "ea503a2f439137a1",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_min_drop_bt6_switch",
+                "type": "str"
+            }
+        ],
+        "x": 720,
+        "y": 300,
+        "wires": [
+            [
+                "a33f133a3ba5b5cf"
+            ]
+        ]
+    },
+    {
+        "id": "8222f5e4d8b49c9a",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_ai_min_drop_bt6_enable",
+                "type": "str"
+            }
+        ],
+        "x": 460,
+        "y": 300,
+        "wires": [
+            [
+                "ea503a2f439137a1",
+                "d2da5f758b6863fb"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d2da5f758b6863fb",
+        "type": "function",
+        "z": "63d468d5922893fb",
+        "name": "Enable/Disable Source",
+        "func": "let source = msg.payload;\nif(source===true) {\n    msg = {\n    enabled:true\n};\nreturn msg;\n} else {\n    msg = {\n    enabled:false\n};\nreturn msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 320,
+        "wires": [
+            [
+                "985b52fd40217260"
+            ]
+        ]
+    },
+    {
+        "id": "3957a136fe60367b",
+        "type": "ui_switch",
+        "z": "63d468d5922893fb",
+        "name": "Aktivera styrning av elpris",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "cf2847ec068da4d4",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "vv_ai_use_price_enable",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 1150,
+        "y": 1420,
+        "wires": [
+            [
+                "dd688814df4a8846"
+            ]
+        ]
+    },
+    {
+        "id": "c51ebbe2317a9d8d",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_use_price_switch",
+                "type": "str"
+            }
+        ],
+        "x": 900,
+        "y": 1420,
+        "wires": [
+            [
+                "3957a136fe60367b"
+            ]
+        ]
+    },
+    {
+        "id": "dd688814df4a8846",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_ai_use_price_enable",
+                "type": "str"
+            }
+        ],
+        "x": 640,
+        "y": 1420,
+        "wires": [
+            [
+                "c51ebbe2317a9d8d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "be7a0338c7f758eb",
+        "type": "debug",
+        "z": "63d468d5922893fb",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1870,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "349088f3ab151347",
+        "type": "ui_chart",
+        "z": "63d468d5922893fb",
+        "name": "VV Ai- Veckograf",
+        "group": "b5e11713367ebe3c",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "label": "VV Ai- Veckograf",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "dd HH:mm",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "6",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#308a0f",
+            "#fba328",
+            "#5b76fb",
+            "#f3e012",
+            "#f3e012",
+            "#e9d60c",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1250,
+        "y": 440,
+        "wires": [
+            [
+                "be7a0338c7f758eb"
+            ]
+        ]
+    },
+    {
+        "id": "8588f8ca0f94fb0b",
+        "type": "ui_text",
+        "z": "63d468d5922893fb",
+        "group": "b5e11713367ebe3c",
+        "order": 8,
+        "width": 12,
+        "height": 3,
+        "name": "VV ai graf info",
+        "label": "{{msg.label}}",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1060,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "ac6599c98487ae26",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_graf_info",
+                "type": "str"
+            }
+        ],
+        "x": 790,
+        "y": 700,
+        "wires": [
+            [
+                "8588f8ca0f94fb0b"
+            ]
+        ]
+    },
+    {
+        "id": "1dac92e8d974b336",
+        "type": "ui_text",
+        "z": "63d468d5922893fb",
+        "group": "cf2847ec068da4d4",
+        "order": 1,
+        "width": "12",
+        "height": "2",
+        "name": "VV ai info 5",
+        "label": "{{msg.label}}",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1650,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "07a46e7b161720f8",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_info5",
+                "type": "str"
+            }
+        ],
+        "x": 1390,
+        "y": 1460,
+        "wires": [
+            [
+                "1dac92e8d974b336"
+            ]
+        ]
+    },
+    {
+        "id": "947060904d403679",
+        "type": "link in",
+        "z": "63d468d5922893fb",
+        "name": "link in 1",
+        "links": [
+            "2a23b367943d737d"
+        ],
+        "x": 275,
+        "y": 1360,
+        "wires": [
+            [
+                "d85ac8128b7e2eda"
+            ]
+        ]
+    },
+    {
+        "id": "d85ac8128b7e2eda",
+        "type": "function",
+        "z": "63d468d5922893fb",
+        "name": "Enable/Disable Source",
+        "func": "let source = msg.payload;\nif(source===true) {\n    msg = {\n    enabled:true\n};\nreturn msg;\n} else {\n    msg = {\n    enabled:false\n};\nreturn msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 1440,
+        "wires": [
+            [
+                "c51ebbe2317a9d8d",
+                "b28998d6e5f07280"
+            ]
+        ]
+    },
+    {
+        "id": "628ed390641486c3",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_manual_schedule_enable",
+                "type": "str"
+            }
+        ],
+        "x": 1500,
+        "y": 2060,
+        "wires": [
+            [
+                "6401888d16ce234a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6401888d16ce234a",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_manual_schedule_enable_switch",
+                "type": "str"
+            }
+        ],
+        "x": 1760,
+        "y": 2060,
+        "wires": [
+            [
+                "1e848dc04ea08bc5"
+            ]
+        ]
+    },
+    {
+        "id": "1e848dc04ea08bc5",
+        "type": "ui_switch",
+        "z": "63d468d5922893fb",
+        "name": "Aktivera tidsstyrt VV-läge",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "a2ad832cfe72c37c",
+        "order": 1,
+        "width": 12,
+        "height": 1,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "vv_manual_schedule_enable",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 2040,
+        "y": 2060,
+        "wires": [
+            [
+                "628ed390641486c3"
+            ]
+        ]
+    },
+    {
+        "id": "0a227024cb013701",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_manual_schedule_from_min",
+                "type": "str"
+            }
+        ],
+        "x": 1500,
+        "y": 2140,
+        "wires": [
+            [
+                "48d362b5439f4df1"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "48d362b5439f4df1",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_manual_schedule_from_dropdown",
+                "type": "str"
+            }
+        ],
+        "x": 1760,
+        "y": 2140,
+        "wires": [
+            [
+                "53bad06f04d31d4e"
+            ]
+        ]
+    },
+    {
+        "id": "53bad06f04d31d4e",
+        "type": "ui_dropdown",
+        "z": "63d468d5922893fb",
+        "name": "VV-tid FRÅN",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "place": "",
+        "group": "a2ad832cfe72c37c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "00:00",
+                "value": 0,
+                "type": "num"
+            },
+            {
+                "label": "01:00",
+                "value": 60,
+                "type": "num"
+            },
+            {
+                "label": "02:00",
+                "value": 120,
+                "type": "num"
+            },
+            {
+                "label": "03:00",
+                "value": 180,
+                "type": "num"
+            },
+            {
+                "label": "04:00",
+                "value": 240,
+                "type": "num"
+            },
+            {
+                "label": "05:00",
+                "value": 300,
+                "type": "num"
+            },
+            {
+                "label": "06:00",
+                "value": 360,
+                "type": "num"
+            },
+            {
+                "label": "07:00",
+                "value": 420,
+                "type": "num"
+            },
+            {
+                "label": "08:00",
+                "value": 480,
+                "type": "num"
+            },
+            {
+                "label": "09:00",
+                "value": 540,
+                "type": "num"
+            },
+            {
+                "label": "10:00",
+                "value": 600,
+                "type": "num"
+            },
+            {
+                "label": "11:00",
+                "value": 660,
+                "type": "num"
+            },
+            {
+                "label": "12:00",
+                "value": 720,
+                "type": "num"
+            },
+            {
+                "label": "13:00",
+                "value": 780,
+                "type": "num"
+            },
+            {
+                "label": "14:00",
+                "value": 840,
+                "type": "num"
+            },
+            {
+                "label": "15:00",
+                "value": 900,
+                "type": "num"
+            },
+            {
+                "label": "16:00",
+                "value": 960,
+                "type": "num"
+            },
+            {
+                "label": "17:00",
+                "value": 1020,
+                "type": "num"
+            },
+            {
+                "label": "18:00",
+                "value": 1080,
+                "type": "num"
+            },
+            {
+                "label": "19:00",
+                "value": 1140,
+                "type": "num"
+            },
+            {
+                "label": "20:00",
+                "value": 1200,
+                "type": "num"
+            },
+            {
+                "label": "21:00",
+                "value": 1260,
+                "type": "num"
+            },
+            {
+                "label": "22:00",
+                "value": 1320,
+                "type": "num"
+            },
+            {
+                "label": "23:00",
+                "value": 1380,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "vv_manual_schedule_from_min",
+        "topicType": "str",
+        "className": "",
+        "x": 2070,
+        "y": 2140,
+        "wires": [
+            [
+                "0a227024cb013701"
+            ]
+        ]
+    },
+    {
+        "id": "cbefc0913ca1e716",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_manual_schedule_to_min",
+                "type": "str"
+            }
+        ],
+        "x": 1500,
+        "y": 2220,
+        "wires": [
+            [
+                "2cac04d7b905ddba"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "2cac04d7b905ddba",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_manual_schedule_to_dropdown",
+                "type": "str"
+            }
+        ],
+        "x": 1760,
+        "y": 2220,
+        "wires": [
+            [
+                "34454082792313f6"
+            ]
+        ]
+    },
+    {
+        "id": "34454082792313f6",
+        "type": "ui_dropdown",
+        "z": "63d468d5922893fb",
+        "name": "VV-tid TILL",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "place": "",
+        "group": "a2ad832cfe72c37c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "00:00",
+                "value": 0,
+                "type": "num"
+            },
+            {
+                "label": "01:00",
+                "value": 60,
+                "type": "num"
+            },
+            {
+                "label": "02:00",
+                "value": 120,
+                "type": "num"
+            },
+            {
+                "label": "03:00",
+                "value": 180,
+                "type": "num"
+            },
+            {
+                "label": "04:00",
+                "value": 240,
+                "type": "num"
+            },
+            {
+                "label": "05:00",
+                "value": 300,
+                "type": "num"
+            },
+            {
+                "label": "06:00",
+                "value": 360,
+                "type": "num"
+            },
+            {
+                "label": "07:00",
+                "value": 420,
+                "type": "num"
+            },
+            {
+                "label": "08:00",
+                "value": 480,
+                "type": "num"
+            },
+            {
+                "label": "09:00",
+                "value": 540,
+                "type": "num"
+            },
+            {
+                "label": "10:00",
+                "value": 600,
+                "type": "num"
+            },
+            {
+                "label": "11:00",
+                "value": 660,
+                "type": "num"
+            },
+            {
+                "label": "12:00",
+                "value": 720,
+                "type": "num"
+            },
+            {
+                "label": "13:00",
+                "value": 780,
+                "type": "num"
+            },
+            {
+                "label": "14:00",
+                "value": 840,
+                "type": "num"
+            },
+            {
+                "label": "15:00",
+                "value": 900,
+                "type": "num"
+            },
+            {
+                "label": "16:00",
+                "value": 960,
+                "type": "num"
+            },
+            {
+                "label": "17:00",
+                "value": 1020,
+                "type": "num"
+            },
+            {
+                "label": "18:00",
+                "value": 1080,
+                "type": "num"
+            },
+            {
+                "label": "19:00",
+                "value": 1140,
+                "type": "num"
+            },
+            {
+                "label": "20:00",
+                "value": 1200,
+                "type": "num"
+            },
+            {
+                "label": "21:00",
+                "value": 1260,
+                "type": "num"
+            },
+            {
+                "label": "22:00",
+                "value": 1320,
+                "type": "num"
+            },
+            {
+                "label": "23:00",
+                "value": 1380,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "vv_manual_schedule_to_min",
+        "topicType": "str",
+        "className": "",
+        "x": 2070,
+        "y": 2220,
+        "wires": [
+            [
+                "cbefc0913ca1e716"
+            ]
+        ]
+    },
+    {
+        "id": "4132f30fd8a3e66d",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_manual_schedule_mode",
+                "type": "str"
+            }
+        ],
+        "x": 1500,
+        "y": 2300,
+        "wires": [
+            [
+                "3abe3f75eace77c1"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3abe3f75eace77c1",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_manual_schedule_mode_dropdown",
+                "type": "str"
+            }
+        ],
+        "x": 1760,
+        "y": 2300,
+        "wires": [
+            [
+                "773a18e29304b1c3"
+            ]
+        ]
+    },
+    {
+        "id": "773a18e29304b1c3",
+        "type": "ui_dropdown",
+        "z": "63d468d5922893fb",
+        "name": "VV-läge i tidsfönster",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "place": "",
+        "group": "a2ad832cfe72c37c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Ingen VV (av)",
+                "value": 0,
+                "type": "num"
+            },
+            {
+                "label": "Eco",
+                "value": 1,
+                "type": "num"
+            },
+            {
+                "label": "Normal",
+                "value": 2,
+                "type": "num"
+            },
+            {
+                "label": "Lux",
+                "value": 3,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "vv_manual_schedule_mode",
+        "topicType": "str",
+        "className": "",
+        "x": 2100,
+        "y": 2300,
+        "wires": [
+            [
+                "4132f30fd8a3e66d"
+            ]
+        ]
+    },
+    {
+        "id": "52107bdcfd4e374c",
+        "type": "ui_text",
+        "z": "63d468d5922893fb",
+        "group": "a2ad832cfe72c37c",
+        "order": 2,
+        "width": 12,
+        "height": 2,
+        "name": "vv_ai_time_info",
+        "label": "{{msg.label}}",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2080,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "6f12ac53f64a164f",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_time_info",
+                "type": "str"
+            }
+        ],
+        "x": 1810,
+        "y": 1940,
+        "wires": [
+            [
+                "52107bdcfd4e374c"
+            ]
+        ]
+    },
+    {
+        "id": "2a5c6db2611b5007",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_price_window_hours_slider",
+                "type": "str"
+            }
+        ],
+        "x": 900,
+        "y": 1560,
+        "wires": [
+            [
+                "e6c95475c0bd7fba"
+            ]
+        ]
+    },
+    {
+        "id": "3a981a67acd513e6",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_ai_price_window_hours",
+                "type": "str"
+            }
+        ],
+        "x": 640,
+        "y": 1560,
+        "wires": [
+            [
+                "2a5c6db2611b5007"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e6c95475c0bd7fba",
+        "type": "ui_slider",
+        "z": "63d468d5922893fb",
+        "name": "Elprisfönster (timmar)",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "cf2847ec068da4d4",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "vv_ai_price_window_hours",
+        "topicType": "str",
+        "min": "1",
+        "max": "23",
+        "step": "1",
+        "className": "",
+        "x": 1140,
+        "y": 1560,
+        "wires": [
+            [
+                "3a981a67acd513e6"
+            ]
+        ]
+    },
+    {
+        "id": "5cff10aec6e47687",
+        "type": "ui_switch",
+        "z": "63d468d5922893fb",
+        "name": "Aktivera Söktimmar",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "cf2847ec068da4d4",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "vv_ai_price_window_enable",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 1130,
+        "y": 1480,
+        "wires": [
+            [
+                "9420fe94c0926bca"
+            ]
+        ]
+    },
+    {
+        "id": "b28998d6e5f07280",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_price_window_enable",
+                "type": "str"
+            }
+        ],
+        "x": 900,
+        "y": 1480,
+        "wires": [
+            [
+                "5cff10aec6e47687"
+            ]
+        ]
+    },
+    {
+        "id": "9420fe94c0926bca",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_ai_price_window_enable",
+                "type": "str"
+            }
+        ],
+        "x": 640,
+        "y": 1480,
+        "wires": [
+            [
+                "b28998d6e5f07280",
+                "b47bd9872cf83277"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "b47bd9872cf83277",
+        "type": "function",
+        "z": "63d468d5922893fb",
+        "name": "Enable/Disable Source 2functions",
+        "func": "let source = msg.payload;\nif (source === true) {\n    msg = {\n        enabled: true\n    };\n    return msg;\n} else {\n    msg = {\n        enabled: false\n    };\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 1560,
+        "wires": [
+            [
+                "2a5c6db2611b5007"
+            ]
+        ]
+    },
+    {
+        "id": "1141bb4145578722",
+        "type": "function",
+        "z": "63d468d5922893fb",
+        "name": "VV AI veckograf (ny)",
+        "func": "// Ta bara hand om VV-AI-grafen\nif (msg.topic !== \"nibe_vv_ai\" && msg.topic !== \"update\") {\n        return null;\n}\n\n// Tillåt \"clear chart\" (msg.payload = []) att passera igenom\nif (Array.isArray(msg.payload) && msg.payload.length === 0) {\n        return msg; // ui_chart tolkar [] som \"clear\"\n}\n\nvar payload = msg.payload || {};\nif (!payload.values || !Array.isArray(payload.values) || !payload.values[0]) {\n        return null;\n}\n\nvar g = payload.values[0];\nvar series = Array.isArray(g.series) ? g.series : [];\nvar data = Array.isArray(g.data) ? g.data : [];\n\n// Vi vill alltid jobba med en vecka = 168 timmar\nvar pointCount = 167;\n\n// Om första serien är kortare (t.ex. precis efter start) – anpassa nedåt\nif (!data[0] || !Array.isArray(data[0]) || data[0].length === 0) {\n        return null; // inget att rita\n}\nif (data[0].length < pointCount) {\n        pointCount = data[0].length;\n}\n\n// Bygg en \"vecka\" med 1 timmes steg, start måndag 00:00\nvar base = new Date();\nbase.setHours(0, 0, 0, 0);         // idag kl 00:00\nvar day = base.getDay();           // 0 = sön, 1 = mån, ... 6 = lör\nvar diffToMonday = (day + 6) % 7;  // hur många dagar bakåt till måndag\nbase.setDate(base.getDate() - diffToMonday);\nvar baseMs = base.getTime();       // måndag 00:00 i ms\n\n// Konvertera [{x,y} ..] eller [y,..] -> [{x:timestamp,y},..] per serie\nvar dataXY = data.map(function (serieArr) {\n        if (!Array.isArray(serieArr)) return [];\n\n        var out = [];\n        for (var i = 0; i < pointCount; i++) {\n                var p = serieArr[i];\n                var y;\n\n                if (p && typeof p.y === \"number\") {\n                        y = p.y;\n                } else if (typeof p === \"number\") {\n                        y = p;\n                } else {\n                        y = 0;\n                }\n\n                var x = baseMs + i * 3600000; // 1 timme = 3 600 000 ms\n                out.push({ x: x, y: y });\n        }\n        return out;\n});\n\n// --- Flytta serie till FRONT (så den ritas överst i din ui_chart) ---\nfunction moveNameToFront(nameExact) {\n        var idx = series.indexOf(nameExact);\n        if (idx >= 0) {\n                var sMoved = series.splice(idx, 1)[0];\n                var dMoved = dataXY.splice(idx, 1)[0];\n                series.unshift(sMoved);\n                dataXY.unshift(dMoved);\n        }\n}\n\n// Vill du ha grön överst: flytta röd först, sen grön (grön hamnar index 0)\nmoveNameToFront(\"VV-pris blockerat (röd)\");\nmoveNameToFront(\"VV-pris värmefönster (grön)\");\n\n// Skicka timeseries-paket till ui_chart\nmsg.payload = [{\n        series: series,\n        data: dataXY,\n        labels: [\"\"]   // krävs men används inte vid tidsaxel\n}];\n\n// Styr x-axelns format: dag + klockslag\nvar weekMs = 7 * 24 * 3600000;   // 7 dygn i ms\n\nmsg.ui_control = msg.ui_control || {};\nmsg.ui_control.xformat = \"ddd HH:mm\";\nmsg.ui_control.xmin = new Date(baseMs).toISOString();\nmsg.ui_control.xmax = new Date(baseMs + weekMs - 1).toISOString();\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 480,
+        "wires": [
+            [
+                "349088f3ab151347"
+            ]
+        ]
+    },
+    {
+        "id": "dfa2dda84bd625db",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_mode_threshold_peaks_slider",
+                "type": "str"
+            }
+        ],
+        "x": 860,
+        "y": 2180,
+        "wires": [
+            [
+                "77e2423e6b3e2966"
+            ]
+        ]
+    },
+    {
+        "id": "d6e8893ac0b763dc",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "hotwater",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "vv_ai_day_peaks_threshold",
+                "type": "str"
+            }
+        ],
+        "x": 600,
+        "y": 2180,
+        "wires": [
+            [
+                "dfa2dda84bd625db"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "77e2423e6b3e2966",
+        "type": "ui_slider",
+        "z": "63d468d5922893fb",
+        "name": "PEAKS",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "5695785330febbb8",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "vv_ai_day_peaks_threshold",
+        "topicType": "str",
+        "min": "0",
+        "max": "7",
+        "step": "0.5",
+        "className": "",
+        "x": 1060,
+        "y": 2180,
+        "wires": [
+            [
+                "d6e8893ac0b763dc"
+            ]
+        ]
+    },
+    {
+        "id": "b6d98d738f3af266",
+        "type": "ui_text",
+        "z": "63d468d5922893fb",
+        "group": "c4e7b2a9d1f3e002",
+        "order": 1,
+        "width": 12,
+        "height": 4,
+        "name": "VV ai info 6",
+        "label": "{{msg.label}}",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1190,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "80dfba38ff0c576f",
+        "type": "subflow:f947788.96a2488",
+        "z": "63d468d5922893fb",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "vv_ai_info6",
+                "type": "str"
+            }
+        ],
+        "x": 930,
+        "y": 900,
+        "wires": [
+            [
+                "b6d98d738f3af266"
             ]
         ]
     }
