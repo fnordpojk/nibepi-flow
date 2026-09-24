@@ -14680,7 +14680,7 @@
                 "type": "str"
             },
             {
-                "label": "AI",
+                "label": "Elprisetjustnu.se",
                 "value": "priceai",
                 "type": "str"
             }
@@ -14723,7 +14723,8 @@
             [
                 "dc3a27b1.8a8ef8",
                 "6374de5f1a8acb86",
-                "500f95f7833641c3"
+                "500f95f7833641c3",
+                "c7b1e0a4d93f2685"
             ]
         ]
     },
@@ -18147,8 +18148,8 @@
         "id": "6374de5f1a8acb86",
         "type": "function",
         "z": "960078e.e3e6d88",
-        "name": "Enable/Disable Source",
-        "func": "let source = msg.payload.price.source;\nif(source==\"priceai\") {\n    msg = {\n    enabled:true\n};\nreturn msg;\n} else {\n    msg = {\n    enabled:false\n};\nreturn msg;\n}\n",
+        "name": "Enable/Disable Source (Tibber + Elprisetjustnu.se)",
+        "func": "let source = msg.payload.price.source;\nif(source==\"priceai\" || source==\"tibber\") {\n    msg = {\n    enabled:true\n};\nreturn msg;\n} else {\n    msg = {\n    enabled:false\n};\nreturn msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -18158,7 +18159,6 @@
         "y": 1580,
         "wires": [
             [
-                "b56bc146.8c73e",
                 "ce66eb27.cf2028",
                 "1b257f41df665627",
                 "4fb3c631e172cf1d",
@@ -18167,6 +18167,25 @@
                 "cf4ace3cd4482f7a",
                 "7efd1f95a11f8703",
                 "e4ed0ba503534dcf"
+            ]
+        ]
+    },
+    {
+        "id": "c7b1e0a4d93f2685",
+        "type": "function",
+        "z": "960078e.e3e6d88",
+        "name": "Enable/Disable Source (endast Elprisetjustnu.se)",
+        "func": "let source = msg.payload.price.source;\nif(source==\"priceai\") {\n    msg = {\n    enabled:true\n};\nreturn msg;\n} else {\n    msg = {\n    enabled:false\n};\nreturn msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 1640,
+        "wires": [
+            [
+                "b56bc146.8c73e"
             ]
         ]
     },
