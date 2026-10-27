@@ -1,12 +1,5 @@
 [
     {
-        "id": "51e88f22.62d4a",
-        "type": "tab",
-        "label": "Test",
-        "disabled": true,
-        "info": ""
-    },
-    {
         "id": "b7f67da0.fbf1",
         "type": "tab",
         "label": "Start",
@@ -275,27 +268,6 @@
         ]
     },
     {
-        "id": "d7f6b34d.d13d6",
-        "type": "mqtt-broker",
-        "name": "NibePi",
-        "broker": "127.0.0.1",
-        "port": "1883",
-        "clientid": "",
-        "usetls": false,
-        "compatmode": true,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
-    },
-    {
         "id": "6aa61182.b42ed",
         "type": "ui_tab",
         "name": "Inställningar",
@@ -341,33 +313,6 @@
         "hidden": false
     },
     {
-        "id": "9efe2aac.f80568",
-        "type": "ui_tab",
-        "name": "List",
-        "icon": "dashboard",
-        "order": 7
-    },
-    {
-        "id": "d814a7db.5cdc38",
-        "type": "ui_group",
-        "name": "Uppdateringar",
-        "tab": "6aa61182.b42ed",
-        "order": 1,
-        "disp": false,
-        "width": "12",
-        "collapse": false
-    },
-    {
-        "id": "810e862f.c36438",
-        "type": "ui_group",
-        "name": "SMHI",
-        "tab": "74cc47a5.9ee208",
-        "order": 3,
-        "disp": true,
-        "width": "12",
-        "collapse": false
-    },
-    {
         "id": "a2cfe148.70708",
         "type": "ui_group",
         "name": "Inomhusreglering S1",
@@ -398,16 +343,6 @@
         "collapse": false
     },
     {
-        "id": "53b18b65.7718c4",
-        "type": "ui_group",
-        "name": "Temperaturgraf",
-        "tab": "72d88fa0.a760e",
-        "order": 4,
-        "disp": false,
-        "width": "12",
-        "collapse": false
-    },
-    {
         "id": "4a7ab836.172ae8",
         "type": "ui_group",
         "name": "Information",
@@ -419,32 +354,12 @@
         "className": ""
     },
     {
-        "id": "72d428b5.3b0eb8",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "9efe2aac.f80568",
-        "order": 1,
-        "disp": true,
-        "width": "12",
-        "collapse": false
-    },
-    {
         "id": "7e910a08.c6c984",
         "type": "ui_group",
         "name": "Prognosreglering S1",
         "tab": "74cc47a5.9ee208",
         "order": 2,
         "disp": false,
-        "width": "12",
-        "collapse": false
-    },
-    {
-        "id": "b561c5cd.249a58",
-        "type": "ui_group",
-        "name": "Inställningar Värme",
-        "tab": "ad3904c7.ceae48",
-        "order": 4,
-        "disp": true,
         "width": "12",
         "collapse": false
     },
@@ -587,15 +502,6 @@
         "collapse": false
     },
     {
-        "id": "88b70b91.66f338",
-        "type": "ui_tab",
-        "name": "Lufthastighet",
-        "icon": "wi-darksky-tornado",
-        "order": 8,
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "844659a2.8d8508",
         "type": "nibe-config",
         "mqtt": true,
@@ -639,13 +545,6 @@
         "disp": false,
         "width": "12",
         "collapse": false
-    },
-    {
-        "id": "ecddb018.0e4f3",
-        "type": "ui_tab",
-        "name": "List",
-        "icon": "dashboard",
-        "order": 9
     },
     {
         "id": "1dc0b5a5.8e56aa",
@@ -876,16 +775,6 @@
         "collapse": false
     },
     {
-        "id": "6dbad083.a9946",
-        "type": "ui_group",
-        "name": "Förbrukning strömavkännare",
-        "tab": "b75c3bdd.9e0ae8",
-        "order": 6,
-        "disp": true,
-        "width": "12",
-        "collapse": false
-    },
-    {
         "id": "ab2b8fca.17eca",
         "type": "ui_group",
         "name": "Graf S2",
@@ -924,19 +813,6 @@
         "disp": false,
         "width": "12",
         "collapse": false
-    },
-    {
-        "id": "f3ab33ed.96488",
-        "type": "ui_tab",
-        "name": "Dashboard",
-        "icon": "dashboard",
-        "order": 1
-    },
-    {
-        "id": "9a2cdcec.a1512",
-        "type": "ui_tab",
-        "name": "testing",
-        "icon": "dashboard"
     },
     {
         "id": "6356450b.b9318c",
@@ -987,23 +863,6 @@
         "collapse": false
     },
     {
-        "id": "ca200017.852e",
-        "type": "ui_tab",
-        "name": "Tab",
-        "icon": "wifi",
-        "order": 1
-    },
-    {
-        "id": "ff1b6a7.cddbb98",
-        "type": "ui_group",
-        "name": "Start",
-        "tab": "f3ab33ed.96488",
-        "order": 2,
-        "disp": true,
-        "width": "12",
-        "collapse": false
-    },
-    {
         "id": "8a26f223.5a5ad",
         "type": "ui_group",
         "name": "Inställningar Pool",
@@ -1033,54 +892,6 @@
         "order": 1,
         "disp": false,
         "width": "12",
-        "collapse": false
-    },
-    {
-        "id": "1409f0ed.f2d6cf",
-        "type": "ui_group",
-        "name": "Automatisk lufthastighet",
-        "tab": "88b70b91.66f338",
-        "order": 1,
-        "disp": true,
-        "width": "12",
-        "collapse": false
-    },
-    {
-        "id": "794cdfce.3f74f",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "ecddb018.0e4f3",
-        "order": 1,
-        "disp": true,
-        "width": "12",
-        "collapse": false
-    },
-    {
-        "id": "4aaf21c9.38fb8",
-        "type": "ui_group",
-        "name": "Data Export",
-        "tab": "f3ab33ed.96488",
-        "order": 1,
-        "disp": true,
-        "width": "12"
-    },
-    {
-        "id": "db563368.2a2e6",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "9a2cdcec.a1512",
-        "order": 1,
-        "disp": true,
-        "width": "6"
-    },
-    {
-        "id": "2b6d659c.ea619a",
-        "type": "ui_group",
-        "name": "Original Group Name",
-        "tab": "ca200017.852e",
-        "order": 3,
-        "disp": true,
-        "width": "6",
         "collapse": false
     },
     {
@@ -1550,1031 +1361,6 @@
         ]
     },
     {
-        "id": "3d914215.23382e",
-        "type": "function",
-        "z": "51e88f22.62d4a",
-        "name": "Set base path",
-        "func": "var filename = msg.req.params.fn;\nvar basePath = \"/tmp/\";\nif(filename==\"config.json\") {\n    basePath = \"/etc/nibepi/\"\n}\n\n\n\n\nif(filename.includes(\"..\\\\\")){\n    msg.payload = \"Illegal file path\";\n    msg.statusCode = 405;//not allowed\n    return [null, msg];//fire output 2\n} else if(filename.includes(\"../\")){\n    msg.payload = \"Illegal file path\";\n    msg.statusCode = 405;//not allowed\n    return [null, msg];//fire output 2\n} \n//TODO: add more checks\n\nmsg.filename = basePath + filename;\nreturn [msg, null];//fire output 1\n\n\n",
-        "outputs": 2,
-        "noerr": 0,
-        "x": 367,
-        "y": 161,
-        "wires": [
-            [
-                "427c7f2c.19d4a"
-            ],
-            [
-                "ea437e79.1ed52"
-            ]
-        ]
-    },
-    {
-        "id": "ea437e79.1ed52",
-        "type": "http response",
-        "z": "51e88f22.62d4a",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 848,
-        "y": 189,
-        "wires": []
-    },
-    {
-        "id": "427c7f2c.19d4a",
-        "type": "file in",
-        "z": "51e88f22.62d4a",
-        "name": "",
-        "filename": "",
-        "format": "",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "x": 557,
-        "y": 141,
-        "wires": [
-            [
-                "ea437e79.1ed52"
-            ]
-        ]
-    },
-    {
-        "id": "390ce923.2e6c06",
-        "type": "catch",
-        "z": "51e88f22.62d4a",
-        "name": "",
-        "scope": null,
-        "uncaught": false,
-        "x": 187,
-        "y": 241,
-        "wires": [
-            [
-                "a63d0dba.f50ef",
-                "d9cf9a8e.2293a8"
-            ]
-        ]
-    },
-    {
-        "id": "a63d0dba.f50ef",
-        "type": "function",
-        "z": "51e88f22.62d4a",
-        "name": "Set 404",
-        "func": "msg.payload = msg.error;\nmsg.statusCode = 404;//resource not found\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 567,
-        "y": 241,
-        "wires": [
-            [
-                "ea437e79.1ed52"
-            ]
-        ]
-    },
-    {
-        "id": "d9cf9a8e.2293a8",
-        "type": "debug",
-        "z": "51e88f22.62d4a",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 217,
-        "y": 281,
-        "wires": []
-    },
-    {
-        "id": "73edb218.ca480c",
-        "type": "ui_template",
-        "z": "51e88f22.62d4a",
-        "group": "4aaf21c9.38fb8",
-        "name": "ui_temlplate - present download links on dashboard",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "format": "<style>\n    var redirect = function() {\n    window.location.href = \"/files/nibepi.log\";\n    }\n</style>\n<div>\n\n<button onclick=\"redirect()\">Download</button>\n\n<div class=\"my_content_container\">\n    <a href=\"/files/nibepi.log\">Ladda ner logg</a>\n</div>\n    <a href=\"/files/config.json\">Download Config file</a>\n</div>\n\n    <style type=\"text/css\">\n.my_content_container a {\n    border-bottom: 1px solid #555555;\n    border-left: 1px solid #555555;\n    border-right: 1px solid #555555;\n    border-top: 1px solid #555555;\n    background: #a80202;\n    color: #FFFFFF;\n    display: block;\n    height: 2.5em;\n    padding: 0 1em;\n    width: 10em;       \n    text-decoration: \"-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif\";\n}\n// :hover and :active styles left as an exercise for the reader.\n</style>",
-        "storeOutMessages": false,
-        "fwdInMessages": true,
-        "templateScope": "local",
-        "x": 557,
-        "y": 321,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e54e869e.f4a778",
-        "type": "comment",
-        "z": "51e88f22.62d4a",
-        "name": "Create http endpoint <nodered>/files/xxx  where xxx is the file name to download",
-        "info": "",
-        "x": 407,
-        "y": 101,
-        "wires": []
-    },
-    {
-        "id": "3a69f55a.5aab6a",
-        "type": "http in",
-        "z": "51e88f22.62d4a",
-        "name": "",
-        "url": "/files/:fn",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 197,
-        "y": 161,
-        "wires": [
-            [
-                "3d914215.23382e",
-                "5fc73a10.3fa5e4"
-            ]
-        ]
-    },
-    {
-        "id": "342405d6.d20f0a",
-        "type": "ui_button",
-        "z": "51e88f22.62d4a",
-        "d": true,
-        "name": "",
-        "group": "97526682.5406d8",
-        "order": 10,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Ladda ner logg",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 290,
-        "y": 371,
-        "wires": [
-            [
-                "8300d178.63ac6"
-            ]
-        ]
-    },
-    {
-        "id": "8300d178.63ac6",
-        "type": "http request",
-        "z": "51e88f22.62d4a",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": false,
-        "url": "http://localhost:1880/files/nibepi.log",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "x": 469,
-        "y": 371,
-        "wires": [
-            [
-                "db0871dc.cf081",
-                "342405d6.d20f0a"
-            ]
-        ]
-    },
-    {
-        "id": "db0871dc.cf081",
-        "type": "debug",
-        "z": "51e88f22.62d4a",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 638,
-        "y": 371,
-        "wires": []
-    },
-    {
-        "id": "5fc73a10.3fa5e4",
-        "type": "debug",
-        "z": "51e88f22.62d4a",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 365,
-        "y": 210,
-        "wires": []
-    },
-    {
-        "id": "34e37b3f.91f4d4",
-        "type": "ui_template",
-        "z": "51e88f22.62d4a",
-        "group": "db563368.2a2e6",
-        "name": "blue",
-        "order": 4,
-        "width": "2",
-        "height": "2",
-        "format": "\n<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#2980b9\"   ng-click=\"send({payload: 'Hello World'})\"> \n    Blue<br/>button\n</md-button> \n\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "x": 456,
-        "y": 581,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1f42f1c0.ade17e",
-        "type": "ui_template",
-        "z": "51e88f22.62d4a",
-        "group": "db563368.2a2e6",
-        "name": "red",
-        "order": 2,
-        "width": "2",
-        "height": "2",
-        "format": "\n<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#c0392b\" ng-click=\"send({payload: 'Hello World'})\"> \n    Red<br/>button\n</md-button> \n\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "templateScope": "local",
-        "x": 456,
-        "y": 501,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "50eaeaf7.460054",
-        "type": "ui_template",
-        "z": "51e88f22.62d4a",
-        "group": "db563368.2a2e6",
-        "name": "green",
-        "order": 3,
-        "width": "2",
-        "height": "2",
-        "format": "\n<md-button class=\"filled touched bigfont rounded vibrate\" style=\"background-color:#27ae60\" ng-click=\"send({payload: 'Hello World'})\"> \n    Green<br/>button\n</md-button> \n\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "x": 456,
-        "y": 541,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4450e418.ad604c",
-        "type": "ui_template",
-        "z": "51e88f22.62d4a",
-        "group": "db563368.2a2e6",
-        "name": "",
-        "order": 5,
-        "width": "2",
-        "height": "1",
-        "format": "\n<md-button class=\"vibrate filled touched smallfont rounded\" style=\"background-color:#16a085\"   ng-click=\"send({payload: 'Hello World'})\"> \n    Blue<br/>button\n</md-button> \n\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "x": 466,
-        "y": 661,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "325d5e4e.9c5862",
-        "type": "ui_template",
-        "z": "51e88f22.62d4a",
-        "group": "db563368.2a2e6",
-        "name": "",
-        "order": 6,
-        "width": "2",
-        "height": "1",
-        "format": "\n<md-button class=\"vibrate filled touched smallfont rounded\" style=\"background-color:#e67e22\" ng-click=\"send({payload: 'Hello World'})\"> \n    Red<br/>button\n</md-button> \n\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "x": 466,
-        "y": 621,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8e2fcfe.d61853",
-        "type": "ui_template",
-        "z": "51e88f22.62d4a",
-        "group": "db563368.2a2e6",
-        "name": "on",
-        "order": 7,
-        "width": "1",
-        "height": "1",
-        "format": "\n<md-button class=\"vibrate filled touched smallfont rounded\" style=\"background-color:#34495e\" ng-click=\"send({payload: 'Hello World'})\"> \n    On\n</md-button> \n\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "x": 456,
-        "y": 701,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1bfdfc43.688954",
-        "type": "ui_template",
-        "z": "51e88f22.62d4a",
-        "group": "db563368.2a2e6",
-        "name": "off",
-        "order": 8,
-        "width": "1",
-        "height": "1",
-        "format": "\n<md-button class=\"vibrate filled touched smallfont rounded\" style=\"background-color:#8e44ad\" ng-click=\"send({payload: 'Hello World'})\"> \n    Off\n</md-button> \n\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "x": 456,
-        "y": 741,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "89764535.4921b8",
-        "type": "ui_template",
-        "z": "51e88f22.62d4a",
-        "group": "db563368.2a2e6",
-        "name": "stuff",
-        "order": 0,
-        "width": "0",
-        "height": "0",
-        "format": "<style>\n  .filled { \n      height: 100% !important;\n\n      padding: 0 !important;\n      margin: 0 !important;\n  }\n  .nr-dashboard-template {\n      padding: 0;\n      margin: 0;\n  }\n  \n  .rounded {\n  border-radius: 12px 12px 12px 12px;\n}\n \n   .bigfont {\n  font-size: 18px;\n}\n\n   .smallfont {\n  font-size: 12px;\n}\n  \n</style>\n\n<script>\n$('.vibrate').on('click', function() {\n  navigator.vibrate(100);\n});\n\nfunction restore_bg(x) {\n            $(this).css(\"background-color\", x);\n    };\n\n$('.touched').on('mousedown', function() {\n    \n    var x= $(this).css(\"background-color\");\n    $(this).css(\"background-color\", \"yellow\");\n    \n    setTimeout(restore_bg.bind(this,x),100);\n    navigator.vibrate(80);\n    });\n    \n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "templateScope": "local",
-        "x": 336,
-        "y": 501,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2f0e8fa4.09e9e",
-        "type": "nibe-request",
-        "z": "51e88f22.62d4a",
-        "server": "844659a2.8d8508",
-        "name": "40004",
-        "x": 358,
-        "y": 1120,
-        "wires": [
-            [
-                "db3d9532.911528"
-            ],
-            [
-                "7f469a56.aa4084"
-            ]
-        ]
-    },
-    {
-        "id": "961d977d.5d8738",
-        "type": "nibe-input",
-        "z": "51e88f22.62d4a",
-        "server": "844659a2.8d8508",
-        "name": "40004",
-        "add": false,
-        "x": 148,
-        "y": 840,
-        "wires": [
-            [
-                "484d8eff.7a3e8"
-            ],
-            [
-                "49559141.0908b"
-            ]
-        ]
-    },
-    {
-        "id": "a1314430.a2cf38",
-        "type": "nibe-output",
-        "z": "51e88f22.62d4a",
-        "server": "844659a2.8d8508",
-        "name": "47260",
-        "x": 393,
-        "y": 1267,
-        "wires": [
-            [
-                "9f60339c.5b275"
-            ]
-        ]
-    },
-    {
-        "id": "484d8eff.7a3e8",
-        "type": "debug",
-        "z": "51e88f22.62d4a",
-        "name": "Get only updated values in msg.payload",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 440,
-        "y": 840,
-        "wires": []
-    },
-    {
-        "id": "49559141.0908b",
-        "type": "debug",
-        "z": "51e88f22.62d4a",
-        "name": "Always updates when messages comes msg.payload",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 480,
-        "y": 882,
-        "wires": []
-    },
-    {
-        "id": "b5e0c15.80c854",
-        "type": "inject",
-        "z": "51e88f22.62d4a",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "Original message",
-        "payloadType": "str",
-        "x": 171,
-        "y": 1120,
-        "wires": [
-            [
-                "2f0e8fa4.09e9e"
-            ]
-        ]
-    },
-    {
-        "id": "db3d9532.911528",
-        "type": "debug",
-        "z": "51e88f22.62d4a",
-        "name": "msg.40004 is updated with the payload msg.40004_raw contains all json info",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 786,
-        "y": 1120,
-        "wires": []
-    },
-    {
-        "id": "7f469a56.aa4084",
-        "type": "debug",
-        "z": "51e88f22.62d4a",
-        "name": "msg.payload is updated with the request.",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 678,
-        "y": 1155,
-        "wires": []
-    },
-    {
-        "id": "b186b23b.f23ca",
-        "type": "comment",
-        "z": "51e88f22.62d4a",
-        "name": "Input node, first output only updates when the value is changed, the second output always updates, msg.raw contains the whole JSON with more information",
-        "info": "",
-        "x": 618,
-        "y": 784,
-        "wires": []
-    },
-    {
-        "id": "d6bc12c6.cdc66",
-        "type": "comment",
-        "z": "51e88f22.62d4a",
-        "name": "Request node, request a updated value from the heatpump, the first output will add the message to msg.40004 (example), the second output adds it to the msg.payload",
-        "info": "",
-        "x": 648,
-        "y": 1064,
-        "wires": []
-    },
-    {
-        "id": "644968bc.2f9638",
-        "type": "inject",
-        "z": "51e88f22.62d4a",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "0",
-        "payloadType": "num",
-        "x": 148,
-        "y": 1267,
-        "wires": [
-            [
-                "a1314430.a2cf38"
-            ]
-        ]
-    },
-    {
-        "id": "9f60339c.5b275",
-        "type": "debug",
-        "z": "51e88f22.62d4a",
-        "name": "Confirmation from the heatpump that the message has been ACKED and the new value is returned",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 872,
-        "y": 1267,
-        "wires": []
-    },
-    {
-        "id": "ecf22247.d918f",
-        "type": "comment",
-        "z": "51e88f22.62d4a",
-        "name": "Output node, sets the selected register to the value in msg.payload",
-        "info": "",
-        "x": 338,
-        "y": 1211,
-        "wires": []
-    },
-    {
-        "id": "bbb21e7b.deeb5",
-        "type": "nibe-input",
-        "z": "51e88f22.62d4a",
-        "server": "844659a2.8d8508",
-        "name": "",
-        "add": false,
-        "x": 158,
-        "y": 973,
-        "wires": [
-            [
-                "d95f285e.f97cc8"
-            ],
-            [
-                "6b25b40a.294a7c"
-            ]
-        ]
-    },
-    {
-        "id": "ba25d0c0.5ac14",
-        "type": "comment",
-        "z": "51e88f22.62d4a",
-        "name": "Unnamed node gets all the updates from every register that has been added or in the LOG.SET",
-        "info": "",
-        "x": 428,
-        "y": 924,
-        "wires": []
-    },
-    {
-        "id": "d95f285e.f97cc8",
-        "type": "debug",
-        "z": "51e88f22.62d4a",
-        "name": "Only updated values",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 422,
-        "y": 966,
-        "wires": []
-    },
-    {
-        "id": "6b25b40a.294a7c",
-        "type": "debug",
-        "z": "51e88f22.62d4a",
-        "name": "Every value, the same or not",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 442,
-        "y": 1008,
-        "wires": []
-    },
-    {
-        "id": "ab590482.5973d8",
-        "type": "nibe-output",
-        "z": "51e88f22.62d4a",
-        "server": "844659a2.8d8508",
-        "name": "",
-        "x": 413,
-        "y": 1379,
-        "wires": [
-            [
-                "ec421b0a.b24538"
-            ]
-        ]
-    },
-    {
-        "id": "ec421b0a.b24538",
-        "type": "debug",
-        "z": "51e88f22.62d4a",
-        "name": "Confirmation from the heatpump that the message has been ACKED and the new value is returned",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 886,
-        "y": 1379,
-        "wires": []
-    },
-    {
-        "id": "8703a141.9b1d7",
-        "type": "inject",
-        "z": "51e88f22.62d4a",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "47260",
-        "payload": "2",
-        "payloadType": "num",
-        "x": 158,
-        "y": 1379,
-        "wires": [
-            [
-                "ab590482.5973d8"
-            ]
-        ]
-    },
-    {
-        "id": "c593780e.fca208",
-        "type": "comment",
-        "z": "51e88f22.62d4a",
-        "name": "No name in output node takes register from msg.topic, and the value from msg.payload",
-        "info": "",
-        "x": 398,
-        "y": 1330,
-        "wires": []
-    },
-    {
-        "id": "c48dd973.28e848",
-        "type": "comment",
-        "z": "51e88f22.62d4a",
-        "name": "Double click a NibePi node and add a server, the MQTT broker is running in the background, if you want NibePi to publish values to it, enable it. Set serialport etc.",
-        "info": "",
-        "x": 621,
-        "y": 1610,
-        "wires": []
-    },
-    {
-        "id": "f9372584.b0dd28",
-        "type": "comment",
-        "z": "51e88f22.62d4a",
-        "name": "The MQTT Broker is running at 127.0.0.1:1883 with no auth.",
-        "info": "",
-        "x": 311,
-        "y": 1652,
-        "wires": []
-    },
-    {
-        "id": "fc5f00c7.7286d",
-        "type": "comment",
-        "z": "51e88f22.62d4a",
-        "name": "In the input node, you can easily add registers by checking the box, NibePi will request them regulary, the more registers added, the longer it will take for each message.",
-        "info": "",
-        "x": 641,
-        "y": 1694,
-        "wires": []
-    },
-    {
-        "id": "418ce020.05b52",
-        "type": "inject",
-        "z": "51e88f22.62d4a",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "removeRegister",
-        "payload": "47260",
-        "payloadType": "num",
-        "x": 191,
-        "y": 1806,
-        "wires": [
-            [
-                "9e627456.20f808"
-            ]
-        ]
-    },
-    {
-        "id": "df66d45.f437b28",
-        "type": "inject",
-        "z": "51e88f22.62d4a",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "addRegister",
-        "payload": "47260",
-        "payloadType": "num",
-        "x": 181,
-        "y": 1848,
-        "wires": [
-            [
-                "9e627456.20f808"
-            ]
-        ]
-    },
-    {
-        "id": "9e627456.20f808",
-        "type": "nibe-output",
-        "z": "51e88f22.62d4a",
-        "server": "844659a2.8d8508",
-        "name": "",
-        "x": 427,
-        "y": 1827,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ee8c77d1.15e4c8",
-        "type": "comment",
-        "z": "51e88f22.62d4a",
-        "name": "Remove or add register with the output node, set the topic as in the example.",
-        "info": "",
-        "x": 361,
-        "y": 1764,
-        "wires": []
-    },
-    {
-        "id": "d54bcc2c.58648",
-        "type": "debug",
-        "z": "51e88f22.62d4a",
-        "name": "MQTT ALL",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 427,
-        "y": 1953,
-        "wires": []
-    },
-    {
-        "id": "dc133679.8045f8",
-        "type": "mqtt in",
-        "z": "51e88f22.62d4a",
-        "name": "MQTT IN : nibe/modbus/#",
-        "topic": "nibe/modbus/#",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "d7f6b34d.d13d6",
-        "inputs": 0,
-        "x": 201,
-        "y": 1953,
-        "wires": [
-            [
-                "d54bcc2c.58648"
-            ]
-        ]
-    },
-    {
-        "id": "ed227deb.346f3",
-        "type": "comment",
-        "z": "51e88f22.62d4a",
-        "name": "If MQTT is activated, messages will come here",
-        "info": "",
-        "x": 261,
-        "y": 1904,
-        "wires": []
-    },
-    {
-        "id": "70dcd804.035618",
-        "type": "mqtt out",
-        "z": "51e88f22.62d4a",
-        "name": "MQTT Out",
-        "topic": "",
-        "qos": "",
-        "retain": "false",
-        "broker": "d7f6b34d.d13d6",
-        "x": 497,
-        "y": 2198,
-        "wires": []
-    },
-    {
-        "id": "467893ef.aefb9c",
-        "type": "inject",
-        "z": "51e88f22.62d4a",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "nibe/modbus/47260/set",
-        "payload": "2",
-        "payloadType": "num",
-        "x": 201,
-        "y": 2156,
-        "wires": [
-            [
-                "70dcd804.035618"
-            ]
-        ]
-    },
-    {
-        "id": "82186993.da9498",
-        "type": "inject",
-        "z": "51e88f22.62d4a",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "nibe/modbus/47260/set",
-        "payload": "0",
-        "payloadType": "num",
-        "x": 201,
-        "y": 2205,
-        "wires": [
-            [
-                "70dcd804.035618"
-            ]
-        ]
-    },
-    {
-        "id": "cfc5f2b7.6527b",
-        "type": "inject",
-        "z": "51e88f22.62d4a",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "nibe/modbus/47260/get",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 211,
-        "y": 2254,
-        "wires": [
-            [
-                "70dcd804.035618"
-            ]
-        ]
-    },
-    {
-        "id": "be5a0d36.2427d",
-        "type": "mqtt in",
-        "z": "51e88f22.62d4a",
-        "name": "MQTT IN : nibe/modbus/47260",
-        "topic": "nibe/modbus/47260",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "d7f6b34d.d13d6",
-        "inputs": 0,
-        "x": 221,
-        "y": 2002,
-        "wires": [
-            [
-                "8e9f1452.09deb8"
-            ]
-        ]
-    },
-    {
-        "id": "bcc00ca8.70603",
-        "type": "mqtt in",
-        "z": "51e88f22.62d4a",
-        "name": "MQTT IN : nibe/modbus/47260/raw",
-        "topic": "nibe/modbus/47260/raw",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "d7f6b34d.d13d6",
-        "inputs": 0,
-        "x": 231,
-        "y": 2051,
-        "wires": [
-            [
-                "e7931296.9676c"
-            ]
-        ]
-    },
-    {
-        "id": "91f36ebd.7798e",
-        "type": "mqtt in",
-        "z": "51e88f22.62d4a",
-        "name": "MQTT IN : nibe/modbus/47260/json",
-        "topic": "nibe/modbus/47260/json",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "d7f6b34d.d13d6",
-        "inputs": 0,
-        "x": 231,
-        "y": 2100,
-        "wires": [
-            [
-                "52f50f37.ba948"
-            ]
-        ]
-    },
-    {
-        "id": "8e9f1452.09deb8",
-        "type": "debug",
-        "z": "51e88f22.62d4a",
-        "name": "MQTT",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 442,
-        "y": 2002,
-        "wires": []
-    },
-    {
-        "id": "e7931296.9676c",
-        "type": "debug",
-        "z": "51e88f22.62d4a",
-        "name": "MQTT RAW",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 469,
-        "y": 2051,
-        "wires": []
-    },
-    {
-        "id": "52f50f37.ba948",
-        "type": "debug",
-        "z": "51e88f22.62d4a",
-        "name": "MQTT JSON",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 469,
-        "y": 2100,
-        "wires": []
-    },
-    {
-        "id": "a04748d8.b32e28",
-        "type": "inject",
-        "z": "51e88f22.62d4a",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "nibe/modbus/47260/add",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 211,
-        "y": 2303,
-        "wires": [
-            [
-                "70dcd804.035618"
-            ]
-        ]
-    },
-    {
-        "id": "f69f128a.a2528",
-        "type": "inject",
-        "z": "51e88f22.62d4a",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "nibe/modbus/47260/remove",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 221,
-        "y": 2352,
-        "wires": [
-            [
-                "70dcd804.035618"
-            ]
-        ]
-    },
-    {
         "id": "39b0fc16.7de5c4",
         "type": "function",
         "z": "b7f67da0.fbf1",
@@ -2585,25 +1371,8 @@
         "x": 267,
         "y": 112,
         "wires": [
-            [
-                "9e97fa96.89ec78"
-            ]
+            []
         ]
-    },
-    {
-        "id": "9e97fa96.89ec78",
-        "type": "debug",
-        "z": "b7f67da0.fbf1",
-        "name": "Data",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 400,
-        "y": 112,
-        "wires": []
     },
     {
         "id": "9ce049af.4ea4c8",
@@ -2698,8 +1467,7 @@
         "wires": [
             [
                 "1d1c593e.bdd0c7",
-                "b4a9d18b.4c69a",
-                "6bc64440.7be37c"
+                "b4a9d18b.4c69a"
             ],
             []
         ]
@@ -2882,26 +1650,6 @@
             ],
             [
                 "bbeace10.c8e3d"
-            ]
-        ]
-    },
-    {
-        "id": "a5330dfd.4dd73",
-        "type": "inject",
-        "z": "b7f67da0.fbf1",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "[]",
-        "payloadType": "json",
-        "x": 918,
-        "y": 1092,
-        "wires": [
-            [
-                "99ffc02f.7bb77"
             ]
         ]
     },
@@ -3566,8 +2314,7 @@
         "y": 1379,
         "wires": [
             [
-                "d46527de.09f758",
-                "4249c2be.4caddc"
+                "d46527de.09f758"
             ],
             []
         ]
@@ -3617,9 +2364,7 @@
         "x": 777,
         "y": 1680,
         "wires": [
-            [
-                "bdd50741.a958d8"
-            ]
+            []
         ]
     },
     {
@@ -3641,21 +2386,6 @@
                 "353f9a08.a4fce6"
             ]
         ]
-    },
-    {
-        "id": "bdd50741.a958d8",
-        "type": "debug",
-        "z": "b7f67da0.fbf1",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 1008,
-        "y": 1722,
-        "wires": []
     },
     {
         "id": "122b1739.bf0d69",
@@ -3746,21 +2476,6 @@
         ]
     },
     {
-        "id": "fc464c80.f957e",
-        "type": "debug",
-        "z": "b7f67da0.fbf1",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1086,
-        "y": 2051,
-        "wires": []
-    },
-    {
         "id": "e20b901b.2d06d",
         "type": "nibe-request",
         "z": "b7f67da0.fbf1",
@@ -3848,7 +2563,6 @@
         "y": 1883,
         "wires": [
             [
-                "fc464c80.f957e",
                 "af5403b7.bf541"
             ]
         ]
@@ -4204,21 +2918,6 @@
         "wires": []
     },
     {
-        "id": "ae0eda11.749f58",
-        "type": "debug",
-        "z": "b7f67da0.fbf1",
-        "name": "Status",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 498,
-        "y": 70,
-        "wires": []
-    },
-    {
         "id": "a95abf3c.1467c",
         "type": "delay",
         "z": "b7f67da0.fbf1",
@@ -4252,8 +2951,7 @@
         "y": 42,
         "wires": [
             [
-                "a95abf3c.1467c",
-                "ae0eda11.749f58"
+                "a95abf3c.1467c"
             ],
             []
         ]
@@ -4583,8 +3281,7 @@
                 "e15ebfa.d82e94",
                 "a923c708.719db8",
                 "25889506.584bea",
-                "8626d815.9571a8",
-                "ae2fe9c8.8c98d8"
+                "8626d815.9571a8"
             ]
         ]
     },
@@ -4763,30 +3460,6 @@
             [
                 "1b0cc4df.6a668b"
             ]
-        ]
-    },
-    {
-        "id": "f0042dae.d44d",
-        "type": "subflow:c191a5d.5d76258",
-        "z": "b7f67da0.fbf1",
-        "name": "",
-        "env": [
-            {
-                "name": "Name",
-                "value": "serial",
-                "type": "str"
-            },
-            {
-                "name": "Function",
-                "value": "port",
-                "type": "str"
-            }
-        ],
-        "x": 1189,
-        "y": 1491,
-        "wires": [
-            [],
-            []
         ]
     },
     {
@@ -4974,20 +3647,6 @@
             ],
             []
         ]
-    },
-    {
-        "id": "4249c2be.4caddc",
-        "type": "debug",
-        "z": "b7f67da0.fbf1",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 322,
-        "y": 1344,
-        "wires": []
     },
     {
         "id": "b0e24ccb.86c35",
@@ -5995,50 +4654,6 @@
             [
                 "b0e24ccb.86c35"
             ]
-        ]
-    },
-    {
-        "id": "ae2fe9c8.8c98d8",
-        "type": "debug",
-        "z": "b7f67da0.fbf1",
-        "name": "Data 1",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 750,
-        "y": 168,
-        "wires": []
-    },
-    {
-        "id": "6bc64440.7be37c",
-        "type": "debug",
-        "z": "b7f67da0.fbf1",
-        "name": "Data 0",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 617,
-        "y": 147,
-        "wires": []
-    },
-    {
-        "id": "a4e6e6a8.b26e98",
-        "type": "function",
-        "z": "b7f67da0.fbf1",
-        "name": "Enable/Disable",
-        "func": "if(msg.topic==\"Start\") {\n    if(msg.payload===true) {\n        node.send({enabled:false});\n    } else {\n        node.send({enabled:true});\n    }\n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 808,
-        "y": 2177,
-        "wires": [
-            []
         ]
     },
     {
@@ -7507,23 +6122,6 @@
                 "a2eff1f.cf84c1"
             ]
         ]
-    },
-    {
-        "id": "415ceb72.bb9114",
-        "type": "ui_toast",
-        "z": "df0dd648.98daa8",
-        "position": "bottom right",
-        "displayTime": "7",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "topic": "",
-        "name": "",
-        "x": 720,
-        "y": 42,
-        "wires": []
     },
     {
         "id": "3e9a73d2.df1c3c",
@@ -9382,26 +7980,6 @@
         ]
     },
     {
-        "id": "3ea8a04b.7965a",
-        "type": "inject",
-        "z": "df0dd648.98daa8",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 631,
-        "y": 1127,
-        "wires": [
-            [
-                "68112050.f83b7"
-            ]
-        ]
-    },
-    {
         "id": "2177b5dbfd1667e7",
         "type": "subflow:c191a5d.5d76258",
         "z": "df0dd648.98daa8",
@@ -9891,9 +8469,7 @@
             [
                 "7c62f68b.7e53a8"
             ],
-            [
-                "96122fbe.f0ca2"
-            ]
+            []
         ]
     },
     {
@@ -11058,21 +9634,6 @@
         ]
     },
     {
-        "id": "96122fbe.f0ca2",
-        "type": "debug",
-        "z": "358baec9.c8b902",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1233,
-        "y": 567,
-        "wires": []
-    },
-    {
         "id": "8b9852c2.592fa",
         "type": "function",
         "z": "358baec9.c8b902",
@@ -11573,26 +10134,6 @@
         "wires": [
             [
                 "76dc2468.d143ec"
-            ]
-        ]
-    },
-    {
-        "id": "19bf9b46.5412a5",
-        "type": "inject",
-        "z": "358baec9.c8b902",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 1195,
-        "y": 1554,
-        "wires": [
-            [
-                "640796f9.8453b8"
             ]
         ]
     },
@@ -13440,8 +11981,7 @@
         "wires": [
             [
                 "d00a5f55.781ef",
-                "f8786cda.32817",
-                "5c3341a438be4652"
+                "f8786cda.32817"
             ],
             []
         ]
@@ -16432,26 +14972,6 @@
         ]
     },
     {
-        "id": "d35a4dc2.16808",
-        "type": "inject",
-        "z": "960078e.e3e6d88",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 740,
-        "y": 917,
-        "wires": [
-            [
-                "c6a13ba3.351018"
-            ]
-        ]
-    },
-    {
         "id": "b56bc146.8c73e",
         "type": "ui_dropdown",
         "z": "960078e.e3e6d88",
@@ -18518,23 +17038,6 @@
         ]
     },
     {
-        "id": "5c3341a438be4652",
-        "type": "debug",
-        "z": "960078e.e3e6d88",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1660,
-        "y": 80,
-        "wires": []
-    },
-    {
         "id": "07e9e82c990ab99e",
         "type": "subflow:f947788.96a2488",
         "z": "960078e.e3e6d88",
@@ -19485,19 +17988,6 @@
         ]
     },
     {
-        "id": "2a23b367943d737d",
-        "type": "link out",
-        "z": "960078e.e3e6d88",
-        "name": "VV AI Elprisreglering",
-        "mode": "link",
-        "links": [
-            "947060904d403679"
-        ],
-        "x": 625,
-        "y": 20,
-        "wires": []
-    },
-    {
         "id": "536a060f.983278",
         "type": "nibe-hotwater",
         "z": "fa4686d6.c21688",
@@ -20124,30 +18614,9 @@
         "y": 371,
         "wires": [
             [
-                "ed7a28da.800c78",
                 "fe27461e.7e1e48"
             ],
             []
-        ]
-    },
-    {
-        "id": "15852af8.995215",
-        "type": "inject",
-        "z": "eee76599.b5f0d8",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "update",
-        "payload": "Uppdatera",
-        "payloadType": "str",
-        "x": 524,
-        "y": 371,
-        "wires": [
-            [
-                "17916cf8.c093b3"
-            ]
         ]
     },
     {
@@ -20234,30 +18703,9 @@
         "y": 504,
         "wires": [
             [
-                "66a2f83a.e878d8",
-                "f86092a6.e0f16"
+                "66a2f83a.e878d8"
             ],
             []
-        ]
-    },
-    {
-        "id": "911f0c0d.14384",
-        "type": "inject",
-        "z": "eee76599.b5f0d8",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "update",
-        "payload": "Uppdatera",
-        "payloadType": "str",
-        "x": 524,
-        "y": 504,
-        "wires": [
-            [
-                "9e04abe.ef6d058"
-            ]
         ]
     },
     {
@@ -20288,36 +18736,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "ed7a28da.800c78",
-        "type": "debug",
-        "z": "eee76599.b5f0d8",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 960,
-        "y": 371,
-        "wires": []
-    },
-    {
-        "id": "f86092a6.e0f16",
-        "type": "debug",
-        "z": "eee76599.b5f0d8",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 949,
-        "y": 467,
-        "wires": []
     },
     {
         "id": "7bac2960.6ef798",
@@ -20644,26 +19062,6 @@
         ]
     },
     {
-        "id": "a8b740ab.2232f",
-        "type": "inject",
-        "z": "eee76599.b5f0d8",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "Värmekurva S1",
-        "payload": "Heatcurve S1",
-        "payloadType": "str",
-        "x": 287,
-        "y": 645,
-        "wires": [
-            [
-                "56b0e966.9f8928"
-            ]
-        ]
-    },
-    {
         "id": "156d24ac.25da5b",
         "type": "ui_chart",
         "z": "27236b7a.3c2274",
@@ -20942,26 +19340,10 @@
         "y": 252,
         "wires": [
             [
-                "d1515232.e5969",
                 "8524887c.d97728"
             ],
             []
         ]
-    },
-    {
-        "id": "d1515232.e5969",
-        "type": "debug",
-        "z": "65e6bc5.05f2644",
-        "name": "Graph IN",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 690,
-        "y": 294,
-        "wires": []
     },
     {
         "id": "71de0e01.6c188",
@@ -21004,9 +19386,7 @@
         "x": 1090,
         "y": 200,
         "wires": [
-            [
-                "606c5425.846fec"
-            ]
+            []
         ]
     },
     {
@@ -21029,46 +19409,6 @@
         "topic": "update",
         "x": 623,
         "y": 140,
-        "wires": [
-            [
-                "ec00f757.4cdbe8"
-            ]
-        ]
-    },
-    {
-        "id": "63058c8e.1043f4",
-        "type": "inject",
-        "z": "65e6bc5.05f2644",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "[]",
-        "payloadType": "json",
-        "x": 645,
-        "y": 189,
-        "wires": [
-            [
-                "71de0e01.6c188"
-            ]
-        ]
-    },
-    {
-        "id": "4f2c3fe1.ee64c",
-        "type": "inject",
-        "z": "65e6bc5.05f2644",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "update",
-        "payload": "",
-        "payloadType": "date",
-        "x": 240,
-        "y": 252,
         "wires": [
             [
                 "ec00f757.4cdbe8"
@@ -21102,8 +19442,7 @@
         "y": 385,
         "wires": [
             [
-                "702b6eb2.c73b2",
-                "54e899fa.d59218"
+                "702b6eb2.c73b2"
             ]
         ]
     },
@@ -21117,8 +19456,7 @@
         "y": 385,
         "wires": [
             [
-                "9ffa29c1.b3d8c8",
-                "a9882946.4e8888"
+                "9ffa29c1.b3d8c8"
             ],
             []
         ]
@@ -21157,8 +19495,7 @@
         "y": 385,
         "wires": [
             [
-                "39af3c28.745144",
-                "910decb4.e0a23"
+                "39af3c28.745144"
             ],
             []
         ]
@@ -21184,21 +19521,6 @@
         ]
     },
     {
-        "id": "910decb4.e0a23",
-        "type": "debug",
-        "z": "65e6bc5.05f2644",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 533,
-        "y": 336,
-        "wires": []
-    },
-    {
         "id": "6d821dfd.4142d4",
         "type": "ui_ui_control",
         "z": "65e6bc5.05f2644",
@@ -21208,7 +19530,6 @@
         "y": 700,
         "wires": [
             [
-                "90aa5691.0f27d8",
                 "8524887c.d97728",
                 "9e36c8ff.1ecbf8",
                 "db88bff5.9059f",
@@ -21220,21 +19541,6 @@
                 "326e9c2d.201cd4"
             ]
         ]
-    },
-    {
-        "id": "90aa5691.0f27d8",
-        "type": "debug",
-        "z": "65e6bc5.05f2644",
-        "name": "UI",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1093,
-        "y": 287,
-        "wires": []
     },
     {
         "id": "8524887c.d97728",
@@ -21251,59 +19557,8 @@
         "y": 260,
         "wires": [
             [
-                "71de0e01.6c188",
-                "dc988b21.09bf38"
+                "71de0e01.6c188"
             ],
-            [
-                "ec00f757.4cdbe8"
-            ]
-        ]
-    },
-    {
-        "id": "606c5425.846fec",
-        "type": "debug",
-        "z": "65e6bc5.05f2644",
-        "name": "Graph OUT",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1246,
-        "y": 231,
-        "wires": []
-    },
-    {
-        "id": "dc988b21.09bf38",
-        "type": "debug",
-        "z": "65e6bc5.05f2644",
-        "name": "NODE",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 981,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "11630e74.8dac82",
-        "type": "inject",
-        "z": "65e6bc5.05f2644",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "time",
-        "payload": "3",
-        "payloadType": "num",
-        "x": 211,
-        "y": 462,
-        "wires": [
             [
                 "ec00f757.4cdbe8"
             ]
@@ -21419,36 +19674,6 @@
                 "c298bb69.805ce8"
             ]
         ]
-    },
-    {
-        "id": "a9882946.4e8888",
-        "type": "debug",
-        "z": "65e6bc5.05f2644",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 578,
-        "y": 446,
-        "wires": []
-    },
-    {
-        "id": "54e899fa.d59218",
-        "type": "debug",
-        "z": "65e6bc5.05f2644",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 932,
-        "y": 455,
-        "wires": []
     },
     {
         "id": "9dbabd89.67234",
@@ -22405,7 +20630,6 @@
         "y": 580,
         "wires": [
             [
-                "d6aad21fe643a0cd",
                 "1141bb4145578722"
             ]
         ]
@@ -22429,23 +20653,6 @@
                 "a24e4db818926a86"
             ]
         ]
-    },
-    {
-        "id": "d6aad21fe643a0cd",
-        "type": "debug",
-        "z": "63d468d5922893fb",
-        "name": "debug 5",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1840,
-        "y": 640,
-        "wires": []
     },
     {
         "id": "983fb7aa3845df62",
@@ -23062,74 +21269,6 @@
             ],
             []
         ]
-    },
-    {
-        "id": "a0621b6d337df2a1",
-        "type": "inject",
-        "z": "63d468d5922893fb",
-        "d": true,
-        "name": "Testa lärhastighet",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1580,
-        "y": 680,
-        "wires": [
-            [
-                "afbfe3409493625c"
-            ]
-        ]
-    },
-    {
-        "id": "afbfe3409493625c",
-        "type": "function",
-        "z": "63d468d5922893fb",
-        "d": true,
-        "name": "function 2",
-        "func": "// Läs globala config som Update core config använder\nconst cfgMsg = global.get(\"config\") || {};\nconst rootCfg = cfgMsg.payload || cfgMsg.config || cfgMsg;\nconst hw = (rootCfg && rootCfg.hotwater) ? rootCfg.hotwater : {};\n\n// Grund: 10 (max)\nlet rate = 10;\n\nif (hw.vv_ai_learning_rate_enable === false) {\n    // Switch AV -> backend ska ignorera slider och köra max (10)\n    rate = 10;\n} else {\n    // Switch PÅ -> använd slider om den är vettig\n    if (hw.vv_ai_learning_rate !== undefined) {\n        const r = Number(hw.vv_ai_learning_rate);\n        if (Number.isFinite(r) && r > 0) {\n            rate = r;\n        }\n    }\n}\n\n// Klampa 1–10\nif (rate < 1) rate = 1;\nif (rate > 10) rate = 10;\n\nconst alpha = rate / 100; // samma som i backend\n\nmsg.payload = {\n    vv_ai_learning_rate_enable: hw.vv_ai_learning_rate_enable,\n    vv_ai_learning_rate: hw.vv_ai_learning_rate,\n    effective_rate: rate,\n    effective_alpha: alpha\n};\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1680,
-        "y": 760,
-        "wires": [
-            [
-                "4068f70fc6262a3b"
-            ]
-        ]
-    },
-    {
-        "id": "4068f70fc6262a3b",
-        "type": "debug",
-        "z": "63d468d5922893fb",
-        "d": true,
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1860,
-        "y": 800,
-        "wires": []
     },
     {
         "id": "a5f1842d6e39042a",
@@ -23875,23 +22014,6 @@
         ]
     },
     {
-        "id": "be7a0338c7f758eb",
-        "type": "debug",
-        "z": "63d468d5922893fb",
-        "name": "debug 8",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1860,
-        "y": 440,
-        "wires": []
-    },
-    {
         "id": "349088f3ab151347",
         "type": "ui_chart",
         "z": "63d468d5922893fb",
@@ -23932,9 +22054,7 @@
         "x": 1250,
         "y": 440,
         "wires": [
-            [
-                "be7a0338c7f758eb"
-            ]
+            []
         ]
     },
     {
@@ -24008,42 +22128,6 @@
         "wires": [
             [
                 "1dac92e8d974b336"
-            ]
-        ]
-    },
-    {
-        "id": "947060904d403679",
-        "type": "link in",
-        "z": "63d468d5922893fb",
-        "name": "link in 1",
-        "links": [
-            "2a23b367943d737d"
-        ],
-        "x": 275,
-        "y": 1360,
-        "wires": [
-            [
-                "d85ac8128b7e2eda"
-            ]
-        ]
-    },
-    {
-        "id": "d85ac8128b7e2eda",
-        "type": "function",
-        "z": "63d468d5922893fb",
-        "name": "Enable/Disable Source",
-        "func": "let source = msg.payload;\nif(source===true) {\n    msg = {\n    enabled:true\n};\nreturn msg;\n} else {\n    msg = {\n    enabled:false\n};\nreturn msg;\n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 300,
-        "y": 1440,
-        "wires": [
-            [
-                "c51ebbe2317a9d8d",
-                "b28998d6e5f07280"
             ]
         ]
     },
