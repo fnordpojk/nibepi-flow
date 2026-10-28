@@ -1,7 +1,7 @@
 {
   "name": "node-red-project",
   "description": "A Node-RED Project",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "dependencies": {
     "mqtt": "^5.15.2",
     "node-red-contrib-nibepi": "github:fnordpojk/node-red-contrib-nibepi#master",
