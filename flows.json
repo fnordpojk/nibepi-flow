@@ -18973,7 +18973,7 @@
         "group": "6356450b.b9318c",
         "order": 1,
         "width": "12",
-        "height": "2",
+        "height": "3",
         "name": "RMU Info",
         "label": "{{msg.label}}",
         "format": "",
@@ -23029,6 +23029,283 @@
         "wires": [
             [
                 "b6d98d738f3af266"
+            ]
+        ]
+    },
+    {
+        "id": "3c6642b18d9d4c89",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "eee76599.b5f0d8",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "rmu",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "gateway",
+                "type": "str"
+            }
+        ],
+        "x": 543,
+        "y": 760,
+        "wires": [
+            [
+                "09bf457e9c45b84c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "09bf457e9c45b84c",
+        "type": "subflow:f947788.96a2488",
+        "z": "eee76599.b5f0d8",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "rmu_gateway",
+                "type": "str"
+            }
+        ],
+        "x": 739,
+        "y": 760,
+        "wires": [
+            [
+                "a6d982f821be3c22"
+            ]
+        ]
+    },
+    {
+        "id": "a6d982f821be3c22",
+        "type": "ui_switch",
+        "z": "eee76599.b5f0d8",
+        "name": "RMU NibeGW",
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "group": "6356450b.b9318c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "gateway",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 893,
+        "y": 760,
+        "wires": [
+            [
+                "3c6642b18d9d4c89"
+            ]
+        ]
+    },
+    {
+        "id": "b89f565f4d3731da",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "eee76599.b5f0d8",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "rmu",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "gateway_port_s1",
+                "type": "str"
+            }
+        ],
+        "x": 543,
+        "y": 810,
+        "wires": [
+            [
+                "76c6742f04037bde"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "76c6742f04037bde",
+        "type": "ui_text_input",
+        "z": "eee76599.b5f0d8",
+        "name": "RMU NibeGW port S1",
+        "label": "UDP-port S1",
+        "tooltip": "",
+        "group": "6356450b.b9318c",
+        "order": 6,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "mode": "number",
+        "delay": "0",
+        "topic": "gateway_port_s1",
+        "sendOnBlur": true,
+        "x": 893,
+        "y": 810,
+        "wires": [
+            [
+                "b89f565f4d3731da"
+            ]
+        ]
+    },
+    {
+        "id": "7062eeb8d156dca9",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "eee76599.b5f0d8",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "rmu",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "gateway_port_s2",
+                "type": "str"
+            }
+        ],
+        "x": 543,
+        "y": 860,
+        "wires": [
+            [
+                "98490076f3751018"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "98490076f3751018",
+        "type": "ui_text_input",
+        "z": "eee76599.b5f0d8",
+        "name": "RMU NibeGW port S2",
+        "label": "UDP-port S2",
+        "tooltip": "",
+        "group": "6356450b.b9318c",
+        "order": 7,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "mode": "number",
+        "delay": "0",
+        "topic": "gateway_port_s2",
+        "sendOnBlur": true,
+        "x": 893,
+        "y": 860,
+        "wires": [
+            [
+                "7062eeb8d156dca9"
+            ]
+        ]
+    },
+    {
+        "id": "261c4dc5b590e8cb",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "eee76599.b5f0d8",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "rmu",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "gateway_port_s3",
+                "type": "str"
+            }
+        ],
+        "x": 543,
+        "y": 910,
+        "wires": [
+            [
+                "ee06965d0a5504f9"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ee06965d0a5504f9",
+        "type": "ui_text_input",
+        "z": "eee76599.b5f0d8",
+        "name": "RMU NibeGW port S3",
+        "label": "UDP-port S3",
+        "tooltip": "",
+        "group": "6356450b.b9318c",
+        "order": 8,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "mode": "number",
+        "delay": "0",
+        "topic": "gateway_port_s3",
+        "sendOnBlur": true,
+        "x": 893,
+        "y": 910,
+        "wires": [
+            [
+                "261c4dc5b590e8cb"
+            ]
+        ]
+    },
+    {
+        "id": "513ac2ced1211cfc",
+        "type": "subflow:c191a5d.5d76258",
+        "z": "eee76599.b5f0d8",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "rmu",
+                "type": "str"
+            },
+            {
+                "name": "Function",
+                "value": "gateway_port_s4",
+                "type": "str"
+            }
+        ],
+        "x": 543,
+        "y": 960,
+        "wires": [
+            [
+                "4133cd8bd79aa259"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "4133cd8bd79aa259",
+        "type": "ui_text_input",
+        "z": "eee76599.b5f0d8",
+        "name": "RMU NibeGW port S4",
+        "label": "UDP-port S4",
+        "tooltip": "",
+        "group": "6356450b.b9318c",
+        "order": 9,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "mode": "number",
+        "delay": "0",
+        "topic": "gateway_port_s4",
+        "sendOnBlur": true,
+        "x": 893,
+        "y": 960,
+        "wires": [
+            [
+                "513ac2ced1211cfc"
             ]
         ]
     }
